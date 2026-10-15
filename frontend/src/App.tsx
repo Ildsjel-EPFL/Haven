@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import { useTranslation, Trans } from 'react-i18next'
 
-const QUICK_EXIT_URL = "https://www.weather.com"
+const QUICK_EXIT_URL = "https://www.youtube.com"
 
 function quickExit() {
   window.location.replace(QUICK_EXIT_URL)
 }
+
+export const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
 // Icons (Inline SVG)
 const IconEyeOff = ({ size = 24, className = "" }) => (
@@ -161,6 +165,7 @@ const IconX = ({ size = 24, className = "" }) => (
 export default function App() {
   const [isCamouflage, setIsCamouflage] = useState(false)
   const [chatOpen, setChatOpen] = useState(false)
+  const { t } = useTranslation()
 
   // Quick Exit: Double ESC
   useEffect(() => {
@@ -204,7 +209,7 @@ export default function App() {
       <div className="min-h-screen bg-white">
         <header className="flex justify-between items-center pt-10 pb-4 px-4 sm:p-6 border-b border-gray-200">
           <div className="font-serif text-xl sm:text-2xl text-gray-800">
-            Chef à la Maison
+            {t("camouflage_page.title")}
           </div>
           <div className="flex gap-2 sm:gap-4 items-center">
             <button
@@ -218,26 +223,26 @@ export default function App() {
               onClick={quickExit}
               className="bg-destructive text-destructive-foreground px-4 py-2 sm:px-4 sm:py-2 text-sm sm:text-base font-bold rounded-radius uppercase tracking-wide hover:opacity-90 shadow-md cursor-pointer min-h-[48px] flex items-center justify-center"
             >
-              Sortie Rapide
+              {t("camouflage_page.quick_exit")}
             </button>
           </div>
         </header>
         <main className="w-full mx-auto p-4 sm:p-8 max-w-4xl">
           <h1 className="text-3xl sm:text-4xl font-serif mb-4 sm:mb-6 text-gray-900">
-            Pâtes Crémeuses aux Tomates en 15 Minutes
+            {t("camouflage_page.recipe_title")}
           </h1>
           <p className="text-gray-700 mb-6 text-base sm:text-lg">
-            Ce dîner de semaine facile est parfait lorsque vous manquez de temps
-            mais que vous avez envie de quelque chose de réconfortant.
+            {t("camouflage_page.recipe_description")}
           </p>
           <div className="bg-gray-100 p-5 sm:p-6 rounded-xl">
-            <h2 className="text-xl sm:text-2xl font-serif mb-4">Ingrédients</h2>
+            <h2 className="text-xl sm:text-2xl font-serif mb-4">{t("camouflage_page.ingredients")}</h2>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm sm:text-base">
-              <li>500g de pâtes penne</li>
-              <li>2 tasses de tomates cerises</li>
-              <li>1/2 tasse de crème épaisse</li>
-              <li>Basilic frais</li>
-              <li>2 gousses d'ail, émincées</li>
+              <Trans 
+              i18nKey="camouflage_page.ingredients_list" 
+              components={{ 
+                li: <li /> 
+              }} 
+            />
             </ul>
           </div>
         </main>
@@ -307,11 +312,10 @@ export default function App() {
       <main className="flex-grow flex flex-col items-center px-4 md:px-8 mt-6 sm:mt-12 w-full max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mb-10 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
-            Vous n'êtes pas seul(e). Soutien gratuit et confidentiel 24h/24.
+            {t("landing_page.hero_title")}
           </h1>
           <p className="text-base sm:text-xl text-primary/80 mb-8 sm:mb-10 max-w-2xl mx-auto">
-            Nous sommes là pour vous aider à trouver la sécurité, des ressources
-            et du soutien. Discutez avec un(e) professionnel(le) dès maintenant.
+            {t("landing_page.hero_description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full">
             <a

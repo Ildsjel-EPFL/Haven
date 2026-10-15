@@ -1,0 +1,14 @@
+{
+  "landing_page": {
+    "hero_title": "Vous n'êtes pas seul(e). Soutien gratuit et confidentiel 24h/24.",
+    "hero_description": "Nous sommes là pour vous aider à trouver la sécurité, des ressources et du soutien. Discutez avec un(e) professionnel(le) dès maintenant."
+  },
+  "camouflage_page": {
+    "title": "Chef à la Maison",
+    "quick_exit": "Sortie rapide",
+    "recipe_title": "Pâtes Crémeuses aux Tomates en 15 Minutes",
+    "recipe_description": "Ce dîner de semaine facile est parfait lorsque vous manquez de tempsCe dîner de semaine facile est parfait lorsque vous manquez de temps mais que vous avez envie de quelque chose de réconfortant.",
+    "ingredients": "Ingrédients",
+    "ingredients_list": "<li>500g de pâtes penne</li><li>2 tasses de tomates cerises</li><li>1/2 tasse de crème épaisse</li><li>Basilic frais</li><li>2 gousses d'ail, émincées</li>"
+  }
+}
