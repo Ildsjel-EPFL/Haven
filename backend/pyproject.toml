@@ -7,18 +7,15 @@ authors = [
     { name = "Ildsjel-EPFL", email = "julien.delez@epfl.ch" }
 ]
 requires-python = ">=3.12"
-<<<<<<< HEAD
 dependencies = [
     "fastapi>=0.141.1",
+    "langchain>=1.4.6",
     "langchain-chroma>=1.1.0",
     "langchain-openai>=1.6.2",
     "langgraph>=1.2.11",
     "pydantic>=2.13.5",
     "uvicorn>=0.53.0",
 ]
-=======
-dependencies = []
->>>>>>> 9fe91505e3036e479a9a0393720db99043e4457b
 
 [project.scripts]
 backend = "backend:main"
