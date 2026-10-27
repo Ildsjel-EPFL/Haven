@@ -10,7 +10,7 @@ def load_conditions_criteria() -> pd.DataFrame:
     """
     Load the conditions from the CSV file and return a DataFrame.
     """
-    return pd.read_csv(r"data\conditions.csv", index_col=0, encoding="utf-8-sig")
+    return pd.read_csv(r"data\conditions_criteria.csv", index_col=0, encoding="utf-8-sig")
 
 def load_answers() -> pd.DataFrame:
     """

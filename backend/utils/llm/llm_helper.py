@@ -13,6 +13,12 @@ def find_last_message(message : Annotated[BaseMessage, add_messages]) -> Tuple[B
     return None, None
 
 def violence_criteria_concatenation() -> str:
+    """
+    Concatenates the violence criteria from the CSV file.
+    
+    Returns:
+        str: The concatenated violence criteria.
+    """
     violence_criteria = load_violence_criteria()
     violence_text = ""
     for title, criterion in zip(violence_titles, violence_criteria["criteria"]):
