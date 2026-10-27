@@ -4,13 +4,20 @@ from langgraph.graph import add_messages
 from typing import Annotated, Tuple
 
 from utils.classes import Situation, Condition
-from data.data_loader import load_answers, load_conditions, condition_titles
+from data.data_loader import load_violence_criteria, violence_titles, load_conditions_criteria, load_answers, condition_titles
 
 def find_last_message(message : Annotated[BaseMessage, add_messages]) -> Tuple[BaseMessage, BaseMessage]:
     for i in range(len(message)-1, -1, -1):
         if isinstance(message[i], HumanMessage):
             return message[:i], message[i]
-    pass
+    return None, None
+
+def violence_criteria_concatenation() -> str:
+    violence_criteria = load_violence_criteria()
+    violence_text = ""
+    for title, criterion in zip(violence_titles, violence_criteria["criteria"]):
+        violence_text += f"## {title}:\n{criterion}\n\n"
+    return violence_text.rstrip()
 
 def condition_criteria_concatenation(situation : Situation) -> str:
     """
@@ -22,9 +29,9 @@ def condition_criteria_concatenation(situation : Situation) -> str:
     Returns:
         str: The concatenated conditions.
     """
-    conditions_df = load_conditions()
+    conditions_criteria = load_conditions_criteria()
     condition_text = ""
-    for action, cond in zip(condition_titles, conditions_df.loc[situation.violence_type]):
+    for action, cond in zip(condition_titles, conditions_criteria.loc[situation.violence_type]):
         if cond:
             condition_text += f"## {action}:\n{cond}\n\n"
     return condition_text.rstrip()
