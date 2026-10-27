@@ -3,7 +3,6 @@ from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.graph import add_messages
 from typing import Annotated, Tuple
 
-
 from utils.classes import Situation, Condition
 from data.data_loader import load_answers, load_conditions, condition_titles
 

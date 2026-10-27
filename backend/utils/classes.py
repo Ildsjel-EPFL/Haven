@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Tuple, ClassVar
+from typing import List, Tuple, Dict, ClassVar
 
 class Situation(BaseModel):
     """
@@ -30,7 +30,7 @@ class Situation(BaseModel):
     children_involved : bool = Field(description="Indicates if children are involved in the situation.")
     forced_marriage : bool = Field(description="Indicates if there is a situation of forced marriage.")
 
-    _VIOLENCE_MAP : ClassVar[dict[Tuple[bool, bool, bool, bool], str]] = {
+    _VIOLENCE_MAP : ClassVar[Dict[Tuple[bool, bool, bool, bool], str]] = {
         (False, False, False, False): "None",
         (True, False, False, False): "PHY",
         (False, True, False, False): "SEX",
