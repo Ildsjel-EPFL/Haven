@@ -7,4 +7,4 @@ from utils.classes import Situation
 class ChatbotState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
     situation_eval : Situation
-    language : str
+    language : str = "fr"

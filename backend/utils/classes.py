@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Tuple, ClassVar
+from typing import List, Tuple, ClassVar
 
 class Situation(BaseModel):
     """
@@ -88,3 +88,18 @@ class Condition(BaseModel):
     fin_legal_psy_support : bool = Field(description="Indicates if the person should seek financial, legal, or psychological support.")
     assets_protection : bool = Field(description="Indicates if the person should take measures for asset protection.")
 
+    @property
+    def mask(self) -> List[bool]:
+        return [
+            self.police,
+            self.pack_your_things,
+            self.leave_home,
+            self.gather_docs,
+            self.preserve_evidence,
+            self.medical_report,
+            self.counselling_support_group,
+            self.neighbour,
+            self.lavi,
+            self.fin_legal_psy_support,
+            self.assets_protection
+        ]
