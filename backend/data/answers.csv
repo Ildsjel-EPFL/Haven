@@ -1,0 +1,91 @@
+﻿,police,pack_your_things,leave_home,gather_docs,preserve_evidence,medical_report,counselling_support_group,neighbour,lavi,fin_legal_psy_support,assets_protection
+PHY,"Une agression en cours :
+    « Il me frappe maintenant. »
+    La crainte d'une nouvelle agression dans l'immédiat : « Il revient et j'ai peur qu'il me frappe. »
+    Une menace immédiate de blessure grave ou de mort.
+    La présence d'une arme utilisée pour la menacer.
+    L'impossibilité de sortir : « Il bloque la porte », « Il m'enferme. »
+    Un·e ex-partenaire qui tente d'entrer de force ou attend devant son domicile en la menaçant.
+    Un enfant ou une autre personne actuellement en danger.
+    Une demande explicite d'intervention ou de protection policière.","« J'ai peur de devoir partir rapidement un jour. »
+« Les violences se répètent. »
+« Je pense partir, mais je ne suis pas encore prête. »
+« Je veux prévoir quelque chose si cela recommence. »
+« J'ai des enfants et je voudrais préparer leurs affaires. »
+« La dernière fois, je suis partie sans médicaments ni vêtements. »","« Je ne me sens pas en sécurité chez moi. »
+« La tension monte et j'ai peur que cela recommence. »
+« Je ne peux pas rester ici cette nuit. »
+« Je veux partir pour me protéger. »
+« Mes enfants ont peur de rester à la maison. »
+« J'ai besoin de m'éloigner pour réfléchir. »","« Je prépare un départ ou une séparation. »
+« Je ne sais pas quels papiers prendre. »
+« Mon partenaire garde tous mes documents. »
+« J'ai peur qu'il détruise mes papiers. »
+« Je vais demander une aide juridique ou financière. »
+« Je veux conserver mes constats médicaux ou les messages de menace. »",,"« J'ai été frappée récemment. »
+« J'ai des bleus, des blessures ou des douleurs. »
+« Je n'ai pas de marque, mais j'ai reçu des coups. »
+« Je voudrais que les violences soient documentées. »
+« Je ne veux pas porter plainte maintenant, mais je veux garder une preuve. »
+« Depuis l'agression, je dors mal ou je suis très angoissée. »","« Je me sens seule. »
+« J'ai honte ou je culpabilise. »
+« Je doute de ce que je vis. »
+« J'ai perdu confiance en moi. »
+« J'ai besoin de comprendre ma situation. »
+« Je voudrais rencontrer des personnes qui ont vécu quelque chose de similaire. »
+« Les violences sont terminées, mais j'en souffre encore. »","« J'ai peur de rester seule chez moi. »
+« Les violences se répètent et je voudrais que quelqu'un à proximité soit au courant. »
+« Mon voisin entend parfois les cris ou les coups. »
+« Je voudrais qu'une personne puisse appeler les secours si elle entend une agression. »
+« J'aimerais convenir d'un signal pour demander de l'aide. »
+« J'ai besoin d'un endroit proche où me réfugier temporairement. »
+« Je connais un·e voisin·e qui pourrait m'aider, mais je ne sais pas comment lui en parler. »
+« Mes proches habitent loin et j'ai besoin d'un soutien à proximité. »
+
+Conditions de sécurité à vérifier :
+* La personne considère ce·tte voisin·e comme fiable.
+* Elle peut le ou la contacter sans augmenter le danger.
+* Le ou la voisin·e respecte sa confidentialité et ne prévient pas son partenaire.
+* L'aide envisagée consiste à alerter les secours, accueillir ou soutenir, sans confronter l'auteur·e des violences.
+","« Je ne sais pas quoi faire. »
+« Je ne sais pas si ce que je vis est de la violence. »
+« Je voudrais parler à quelqu'un. »
+« Je ne connais pas les services qui peuvent m'aider. »
+« Je veux de l'aide, mais je ne suis pas prête à me séparer. »
+« Je suis déjà partie, mais j'ai encore besoin de soutien. »
+« Je cherche de l'aide pour une personne proche. »
+
+Réponse possible :
+« Si vous avez besoin de parler à quelqu'un maintenant ou ne savez pas quoi faire face aux violences, vous pouvez appeler le 142, le numéro national d'aide aux victimes en Suisse. Il est gratuit, confidentiel et accessible 24 h/24, 7 j/7.
+
+Des professionnel·les formé·es peuvent vous écouter, vous aider à faire le point, expliquer les démarches possibles et vous orienter vers les services adaptés. Ce numéro s'adresse aux personnes ayant subi des violences physiques, psychologiques ou sexuelles, ainsi qu'à leurs proches.
+
+Vous pouvez appeler même si vous n'avez pas porté plainte ou ne savez pas encore quelles démarches entreprendre. Vous pouvez simplement commencer par : « Je vis une situation qui me fait peur et j'ai besoin d'aide. »
+
+Pour un accompagnement dans la durée, le Centre LAVI pourra ensuite vous proposer un soutien adapté.
+
+Le 142 ne remplace pas les secours : en cas de danger immédiat, appelez la police au 117 ; en cas d'urgence médicale vitale, appelez le 144. »","Exemples de réponses qui déclenchent la proposition :
+
+* Financier : « Je n'ai pas d'argent pour partir », « Je ne peux pas payer un hébergement », « Les frais liés aux violences m'inquiètent ».
+* Juridique : « Je voudrais connaître mes droits », « Je veux savoir comment porter plainte », « J'ai peur de perdre mes enfants ou mon permis de séjour », « Je veux savoir comment me protéger de mon ex ».
+* Psychologique : « Je suis très angoissée », « Je n'arrive plus à dormir », « J'ai besoin d'un accompagnement après ce que j'ai subi ».
+","« Mon partenaire a accès à mon compte personnel. »
+« Il prend mon argent sans mon accord. »
+« Il connaît mes identifiants bancaires. »
+« J'ai peur qu'il vide mon compte si je pars. »
+« Je n'ai aucun compte auquel lui seul n'a pas accès. »
+« Je veux sécuriser mon argent avant une séparation. »"
+SEX,,,,,,,,,,,
+PSY,,,,,,,,,,,
+ECO,,,,,,,,,,,
+PHY_SEX,,,,,,,,,,,
+PHY_PSY,,,,,,,,,,,
+PHY_ECO,,,,,,,,,,,
+SEX_PSY,,,,,,,,,,,
+SEX_ECO,,,,,,,,,,,
+PSY_ECO,,,,,,,,,,,
+PHY_SEX_PSY,,,,,,,,,,,
+PHY_SEX_ECO,,,,,,,,,,,
+PHY_PSY_ECO,,,,,,,,,,,
+SEX_PSY_ECO,,,,,,,,,,,
+PHY_SEX_PSY_ECO,,,,,,,,,,,
