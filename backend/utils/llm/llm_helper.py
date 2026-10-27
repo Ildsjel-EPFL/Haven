@@ -12,7 +12,7 @@ def find_last_message(message : Annotated[BaseMessage, add_messages]) -> Tuple[B
             return message[:i], message[i]
     pass
 
-def condition_concatenation(situation : Situation) -> str:
+def condition_criteria_concatenation(situation : Situation) -> str:
     """
     Concatenates the conditions based on the situation and condition provided.
 
@@ -29,7 +29,7 @@ def condition_concatenation(situation : Situation) -> str:
             condition_text += f"## {action}:\n{cond}\n\n"
     return condition_text.rstrip()
 
-def answer_concatenation(situation : Situation, condition : Condition) -> str:
+def condition_answer_concatenation(situation : Situation, condition : Condition) -> str:
     """
     Concatenates the answers based on the situation and condition provided.
     
