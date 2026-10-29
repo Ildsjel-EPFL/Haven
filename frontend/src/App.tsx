@@ -162,10 +162,118 @@ const IconX = ({ size = 24, className = "" }) => (
   </svg>
 )
 
+type ChatMessage = {
+  role: "user" | "assistant"
+  content: string
+}
+
+// const [message, setMessage] = useState("")
+// const [messages, setMessages] = useState<ChatMessage[]>([])
+// const [isSending, setIsSending] = useState(false)
+
+// async function sendMessage() {
+//   const content = message.trim()
+
+//   if (!content || isSending) {
+//     return
+//   }
+
+//   setMessages((current) => [
+//     ...current,
+//     { role: "user", content },
+//   ])
+//   setMessage("")
+//   setIsSending(true)
+
+//   try {
+//     const response = await fetch("http://localhost:8000/chat", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ message: content }),
+//     })
+
+//     if (!response.ok) {
+//       throw new Error(`Chat request failed: ${response.status}`)
+//     }
+
+//     const data: { response: string } = await response.json()
+
+//     setMessages((current) => [
+//       ...current,
+//       { role: "assistant", content: data.response },
+//     ])
+//   } catch (error) {
+//     console.error("Unable to send chat message:", error)
+
+//     setMessages((current) => [
+//       ...current,
+//       {
+//         role: "assistant",
+//         content: "Une erreur est survenue. Veuillez réessayer.",
+//       },
+//     ])
+//   } finally {
+//     setIsSending(false)
+//   }
+// }
+
 export default function App() {
   const [isCamouflage, setIsCamouflage] = useState(false)
   const [chatOpen, setChatOpen] = useState(false)
+  const [message, setMessage] = useState("")
+  const [messages, setMessages] = useState<ChatMessage[]>([])
+  const [isSending, setIsSending] = useState(false)
   const { t } = useTranslation()
+
+  async function sendMessage() {
+    const content = message.trim()
+
+    if (!content || isSending) {
+      return
+    }
+
+    setMessages((current) => [
+      ...current,
+      { role: "user", content },
+    ])
+    setMessage("")
+    setIsSending(true)
+
+    try {
+      const response = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: content }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Chat request failed: ${response.status}`)
+      }
+
+      const data: { response: string } = await response.json()
+
+      setMessages((current) => [
+        ...current,
+        { role: "assistant", content: data.response },
+      ])
+    } catch (error) {
+      console.error("Unable to send chat message:", error)
+
+      setMessages((current) => [
+        ...current,
+        {
+          role: "assistant",
+          content: "Une erreur est survenue. Veuillez réessayer.",
+        },
+      ])
+    } finally {
+      setIsSending(false)
+    }
+  }
 
   // Quick Exit: Double ESC
   useEffect(() => {
@@ -451,20 +559,58 @@ export default function App() {
               <IconX size={20} />
             </button>
           </div>
+          {/* <div className="h-[40vh] sm:h-64 p-3 sm:p-4 bg-gray-50 flex flex-col gap-3 overflow-y-auto">
+            <div className="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none w-[90%] sm:w-5/6 text-sm">
+              Bonjour. Vous êtes connecté(e) à une Intelligence Artificielle sécurisée
+              et confidentielle. Comment pouvons-nous vous aider ?
+            </div>
+          </div> */}
           <div className="h-[40vh] sm:h-64 p-3 sm:p-4 bg-gray-50 flex flex-col gap-3 overflow-y-auto">
             <div className="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none w-[90%] sm:w-5/6 text-sm">
               Bonjour. Vous êtes connecté(e) à une Intelligence Artificielle sécurisée
               et confidentielle. Comment pouvons-nous vous aider ?
             </div>
+
+            {messages.map((chatMessage, index) => (
+              <div
+                key={`${chatMessage.role}-${index}`}
+                className={
+                  chatMessage.role === "user"
+                    ? "self-end bg-primary text-primary-foreground p-3 rounded-lg rounded-tr-none w-[90%] sm:w-5/6 text-sm"
+                    : "bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none w-[90%] sm:w-5/6 text-sm"
+                }
+              >
+                {chatMessage.content}
+              </div>
+            ))}
           </div>
           <div className="p-3 bg-white border-t border-gray-200 flex gap-2">
-            <input
+            {/* <input
               type="text"
               placeholder="Tapez votre message..."
               className="flex-grow border border-gray-300 rounded-md px-3 py-2 text-base focus:outline-none focus:border-primary min-h-[48px]"
-            />
-            <button className="bg-primary text-primary-foreground px-4 rounded-md font-bold text-sm cursor-pointer min-h-[48px]">
+            /> */}
+              <input
+                type="text"
+                placeholder="Tapez votre message..."
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    void sendMessage()
+                  }
+                }}
+                className="flex-grow border border-gray-300 rounded-md px-3 py-2 text-base focus:outline-none focus:border-primary min-h-[48px]"
+              />
+            {/* <button className="bg-primary text-primary-foreground px-4 rounded-md font-bold text-sm cursor-pointer min-h-[48px]">
               Envoyer
+            </button> */}
+            <button
+              onClick={() => void sendMessage()}
+              disabled={isSending || !message.trim()}
+              className="bg-primary text-primary-foreground px-4 rounded-md font-bold text-sm cursor-pointer min-h-[48px] disabled:opacity-50"
+            >
+              {isSending ? "..." : "Envoyer"}
             </button>
           </div>
           <div className="bg-gray-100 p-2 text-center">

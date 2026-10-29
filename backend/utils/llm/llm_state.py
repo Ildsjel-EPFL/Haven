@@ -6,6 +6,7 @@ from utils.classes import Situation, Condition
 
 class ChatbotState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
-    situation : NotRequired[list[Situation]]
-    condition : NotRequired[list[Condition]]
-    language : str = "fr"
+    situation: NotRequired[Situation]
+    condition: NotRequired[Condition]
+    response: NotRequired[str]
+    language: str = "fr"

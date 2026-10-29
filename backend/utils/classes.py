@@ -103,3 +103,22 @@ class Condition(BaseModel):
             self.fin_legal_psy_support,
             self.assets_protection
         ]
+
+class ChatRequest(BaseModel):
+    """
+    Represents a request for a chat interaction, containing the message to be processed.
+
+    Attributes:
+        message (str): The message content to be processed in the chat interaction.
+    """
+    message: str
+
+
+class ChatResponse(BaseModel):
+    """
+    Represents a response to a chat interaction, containing the generated response.
+
+    Attributes:
+        response (str): The generated response to the chat interaction.
+    """
+    response: str
