@@ -7,8 +7,8 @@ function quickExit() {
   window.location.replace(QUICK_EXIT_URL)
 }
 
-export const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+// export const { t, i18n } = useTranslation();
+//   const currentLang = i18n.language;
 
 // Icons (Inline SVG)
 const IconEyeOff = ({ size = 24, className = "" }) => (
