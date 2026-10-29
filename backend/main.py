@@ -43,5 +43,5 @@ def chat(request: ChatRequest) -> ChatResponse:
     )
 
     return ChatResponse(
-        response=str(result.get("response", "Aucune réponse générée."))
+        response=result.get("response", "Aucune réponse générée.")
     )

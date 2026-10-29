@@ -50,5 +50,6 @@ Ta réponse doit faire maximum 3 phrases et 200 mots maximum.
 
 Utilise un langage simple et rassurant, en évitant les termes techniques ou juridiques complexes.
 
-REGLES STRICTES : Réponds uniquement avec un objet JSON contenant exactement un champ "response" qui contient la réponse générée.
+Réponds uniquement avec le message destiné à la personne.
+Ne renvoie pas de JSON, ne renvoie pas de code et n'ajoute pas de champ "response".
 """
