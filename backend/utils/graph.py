@@ -28,4 +28,4 @@ def build_graph() -> CompiledStateGraph[ChatbotState, None, ChatbotState, Chatbo
 
     return workflow.compile(checkpointer=MemorySaver())
 
-graph = build_graph()
+graph : CompiledStateGraph[ChatbotState, None, ChatbotState, ChatbotState] = build_graph()

@@ -15,12 +15,24 @@ def situation_evaluation_node(state: ChatbotState) -> dict:
         
     Returns:
         dict: A dictionary containing the evaluation results of the situation."""
-    violence_criteria = violence_criteria_concatenation()
-    prompt = ChatPromptTemplate.from_template(situation_evaluation_prompt)
-    evaluator_llm = llm.with_structured_output(Situation)
-    chain  =  prompt | evaluator_llm
-    situation = chain.invoke({"messages": state["messages"], "violence_criteria": violence_criteria})
-    return {"situation": situation}
+    
+    # violence_criteria = violence_criteria_concatenation()
+    # prompt = ChatPromptTemplate.from_template(situation_evaluation_prompt)
+    # evaluator_llm = llm.with_structured_output(Situation)
+    # chain  =  prompt | evaluator_llm
+    # situation = chain.invoke({"messages": state["messages"], "violence_criteria": violence_criteria})
+    # return {"situation": situation}
+    
+    return {"situation": Situation(
+        conflict=False,
+        physical_violence=True,
+        sexual_violence=False,
+        psychological_violence=False,
+        economical_violence=False,
+        residential_permit=False,
+        children_involved=False,
+        forced_marriage=False
+    )}
 
 def conditions_evaluation_node(state: ChatbotState) -> dict:
     criteria = condition_criteria_concatenation(state["situation"])
