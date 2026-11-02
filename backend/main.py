@@ -17,18 +17,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# @app.post("/chat", response_model=ChatResponse)
-# def chat(request: ChatRequest) -> ChatResponse:
-#     result = graph.invoke(
-#         {
-#             "messages": [HumanMessage(content=request.message)],
-#         }
-#     )
-
-#     return ChatResponse(
-#         response=str(result.get("response", "Aucune réponse générée."))
-#     )
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest) -> ChatResponse:
     result = graph.invoke(
