@@ -112,6 +112,8 @@ class ChatRequest(BaseModel):
         message (str): The message content to be processed in the chat interaction.
     """
     message: str
+    language: str = "fr"
+    session_id: str
 
 
 class ChatResponse(BaseModel):

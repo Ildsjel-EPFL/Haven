@@ -9,6 +9,22 @@ from utils.classes import ChatRequest, ChatResponse
 
 app = FastAPI()
 
+SUPPORTED_LANGUAGES = {
+    "fr": "français",
+    "de": "allemand",
+    "it": "italien",
+    "en": "anglais",
+    "es": "espagnol",
+    "pt": "portugais",
+    "sq": "albanais",
+    "tr": "turc",
+    "ar": "arabe",
+    "bs": "bosnien",
+    "hr": "croate",
+    "sr-Latn": "serbe en alphabet latin",
+    "sr-Cyrl": "serbe en alphabet cyrillique",
+}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -19,13 +35,15 @@ app.add_middleware(
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest) -> ChatResponse:
+    language = request.language if request.language in SUPPORTED_LANGUAGES else "fr"
     result = graph.invoke(
         {
             "messages": [HumanMessage(content=request.message)],
+            "language": SUPPORTED_LANGUAGES[language],
         },
         config={
             "configurable": {
-                "thread_id": "default-chat",
+                "thread_id": request.session_id,
             }
         },
     )

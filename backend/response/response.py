@@ -28,6 +28,7 @@ def response_generation_node(state: ChatbotState) -> dict:
         {
             "messages": state["messages"],
             "answers": answers,
+            "language": state["language"],
         }
     )
 

@@ -9,4 +9,4 @@ class ChatbotState(TypedDict):
     situation: NotRequired[Situation]
     condition: NotRequired[Condition]
     response: NotRequired[str]
-    language: str = "fr"
+    language: str

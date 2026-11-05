@@ -2,9 +2,21 @@ import React, { useEffect, useState } from "react";
 import { useTranslation, Trans } from 'react-i18next'
 
 const QUICK_EXIT_URL = "https://www.youtube.com"
+const CHAT_SESSION_STORAGE_KEY = "haven-chat-session-id"
 
 function quickExit() {
   window.location.replace(QUICK_EXIT_URL)
+}
+
+function getChatSessionId() {
+  const storedSessionId = sessionStorage.getItem(CHAT_SESSION_STORAGE_KEY)
+  if (storedSessionId) {
+    return storedSessionId
+  }
+
+  const sessionId = crypto.randomUUID()
+  sessionStorage.setItem(CHAT_SESSION_STORAGE_KEY, sessionId)
+  return sessionId
 }
 
 // export const { t, i18n } = useTranslation();
@@ -167,6 +179,22 @@ type ChatMessage = {
   content: string
 }
 
+const languages = [
+  { code: "fr", label: "Français" },
+  { code: "de", label: "Deutsch" },
+  { code: "it", label: "Italiano" },
+  { code: "en", label: "English" },
+  { code: "es", label: "Español" },
+  { code: "pt", label: "Português" },
+  { code: "sq", label: "Shqip" },
+  { code: "tr", label: "Türkçe" },
+  { code: "ar", label: "العربية" },
+  { code: "bs", label: "Bosanski" },
+  { code: "hr", label: "Hrvatski" },
+  { code: "sr-Latn", label: "Srpski — latinica" },
+  { code: "sr-Cyrl", label: "Српски — ћирилица" },
+] as const
+
 // const [message, setMessage] = useState("")
 // const [messages, setMessages] = useState<ChatMessage[]>([])
 // const [isSending, setIsSending] = useState(false)
@@ -225,7 +253,19 @@ export default function App() {
   const [message, setMessage] = useState("")
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [isSending, setIsSending] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    const language = i18n.language
+    document.documentElement.lang = language
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr"
+  }, [i18n.language])
+
+  function changeLanguage(language: string) {
+    void i18n.changeLanguage(language)
+    localStorage.setItem("language", language)
+    setMessages([])
+  }
 
   async function sendMessage() {
     const content = message.trim()
@@ -247,7 +287,11 @@ export default function App() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: content }),
+        body: JSON.stringify({
+          message: content,
+          language: i18n.language,
+          session_id: getChatSessionId(),
+        }),
       })
 
       if (!response.ok) {
@@ -267,7 +311,7 @@ export default function App() {
         ...current,
         {
           role: "assistant",
-          content: "Une erreur est survenue. Veuillez réessayer.",
+          content: t("errors.chat_request"),
         },
       ])
     } finally {
@@ -294,7 +338,7 @@ export default function App() {
   // Camouflage Mode Side Effects
   useEffect(() => {
     if (isCamouflage) {
-      document.title = "Recettes de Pâtes Rapides | Chef à la Maison"
+      document.title = t("camouflage_page.recipe_title")
       const link = document.querySelector(
         "link[rel~='icon']",
       ) as HTMLLinkElement
@@ -302,7 +346,7 @@ export default function App() {
         link.href = "https://www.google.com/favicon.ico"
       }
     } else {
-      document.title = "Haven | Soutien en cas de crise"
+      document.title = t("document.title")
       const link = document.querySelector(
         "link[rel~='icon']",
       ) as HTMLLinkElement
@@ -310,7 +354,7 @@ export default function App() {
         link.href = "/favicon.svg"
       }
     }
-  }, [isCamouflage])
+  }, [isCamouflage, i18n.language, t])
 
   if (isCamouflage) {
     return (
@@ -324,8 +368,8 @@ export default function App() {
               onClick={() => setIsCamouflage(false)}
               className="text-xs sm:text-sm text-gray-500 hover:text-gray-900 min-h-[48px] px-1"
             >
-              <span className="hidden sm:inline">Quitter la vue</span>
-              <span className="inline sm:hidden">Retour</span>
+              <span className="hidden sm:inline">{t("camouflage_page.leave_view")}</span>
+              <span className="inline sm:hidden">{t("camouflage_page.back")}</span>
             </button>
             <button
               onClick={quickExit}
@@ -369,18 +413,18 @@ export default function App() {
         <button
           onClick={() => setIsCamouflage(true)}
           className="pointer-events-auto flex items-center justify-center gap-2 bg-white/95 backdrop-blur border border-border text-primary px-4 py-3 sm:px-4 sm:py-2 rounded-full sm:rounded-radius shadow-lg sm:shadow-sm hover:bg-gray-50 transition-colors cursor-pointer min-h-[48px]"
-          title="Masquer cette page"
+          title={t("quick_exit.hide_page")}
         >
           <IconEyeOff size={20} />
-          <span className="hidden sm:inline font-medium">Vue Camouflage</span>
+          <span className="hidden sm:inline font-medium">{t("camouflage_page.view_label")}</span>
         </button>
         <button
           onClick={quickExit}
           className="pointer-events-auto bg-destructive text-destructive-foreground px-5 py-3 sm:px-6 sm:py-3 text-sm sm:text-base font-bold rounded-full sm:rounded-radius uppercase tracking-wider shadow-xl hover:opacity-90 flex items-center justify-center gap-2 transition-transform active:scale-95 cursor-pointer min-h-[48px]"
-          title="Appuyez deux fois sur Échap pour quitter"
+          title={t("quick_exit.double_escape")}
         >
           <IconShieldAlert size={20} />
-          <span>Sortie Rapide</span>
+          <span>{t("quick_exit.label")}</span>
         </button>
       </div>
 
@@ -391,10 +435,10 @@ export default function App() {
             size={14}
             className="inline-block mr-1 sm:mr-2 mb-1"
           />
-          <strong>Avis d'urgence :</strong> L'utilisation d'Internet peut être
-          surveillée. Apprenez à{" "}
+          <strong>{t("warning.emergency_notice")}</strong>{" "}
+          {t("warning.internet_monitoring")}{" "}
           <a href="#" className="underline hover:text-accent">
-            effacer votre historique
+            {t("warning.clear_history")}
           </a>
           .
         </p>
@@ -406,14 +450,28 @@ export default function App() {
           HAVEN
         </div>
         <div className="text-secondary font-medium items-center gap-2 text-sm sm:text-base hidden sm:flex">
-          Assistance :{" "}
+          {t("navigation.support")}{" "}
           <a
             href="tel:1-800-799-7233"
             className="text-primary hover:underline font-bold text-base sm:text-lg"
           >
-            1-800-799-SAFE
+            {t("navigation.phone")}
           </a>
         </div>
+        <label className="text-sm text-primary">
+          <span className="sr-only">{t("language.select")}</span>
+          <select
+            value={i18n.language}
+            onChange={(event) => changeLanguage(event.target.value)}
+            className="border border-border rounded-md bg-white px-2 py-2"
+          >
+            {languages.map((language) => (
+              <option key={language.code} value={language.code}>
+                {language.label}
+              </option>
+            ))}
+          </select>
+        </label>
       </header>
 
       {/* Hero Section */}
@@ -431,27 +489,25 @@ export default function App() {
               className="bg-primary text-primary-foreground w-full sm:w-auto px-6 py-4 rounded-radius font-semibold text-base sm:text-lg hover:opacity-90 flex items-center justify-center gap-3 shadow-md min-h-[56px]"
             >
               <IconPhoneCall size={24} />
-              Appeler la ligne d'assistance
+              {t("landing_page.call_support")}
             </a>
             <button
               onClick={() => setChatOpen(true)}
               className="bg-white border-2 border-primary text-primary w-full sm:w-auto px-6 py-4 rounded-radius font-semibold text-base sm:text-lg hover:bg-primary/5 flex items-center justify-center gap-3 shadow-sm cursor-pointer min-h-[56px]"
             >
               <IconMessageCircle size={24} />
-              Chat confidentiel
+              {t("landing_page.confidential_chat")}
             </button>
           </div>
           <p className="mt-4 text-xs sm:text-sm text-secondary/80 px-2">
-            Remarque : Les appels téléphoniques standard peuvent apparaître sur
-            les factures mobiles. Utilisez une ligne publique si vous êtes
-            surveillé(e).
+            {t("landing_page.phone_note")}
           </p>
         </div>
 
         {/* Safety Essentials Grid */}
         <div className="w-full">
           <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-8 border-b border-border/50 pb-3 sm:pb-4">
-            Redirection
+            {t("landing_page.redirection")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {/* Card 1 */}
@@ -460,20 +516,19 @@ export default function App() {
                 <IconFileText size={20} className="sm:w-6 sm:h-6" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-primary">
-                Plan de Fuite Immédiat
+                {t("cards.immediate_escape_plan")}
               </h3>
               <p className="text-primary/70 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                Une liste de contrôle des documents essentiels, des clés et des
-                médicaments à rassembler si vous devez partir rapidement.
+                {t("cards.immediate_escape_description")}
               </p>
               <SafetyChecklistModal
-                title="Plan de Fuite Immédiat"
+                title={t("cards.immediate_escape_plan")}
                 items={[
-                  "Pièce d'identité (Permis de conduire, Passeport)",
-                  "Certificats de naissance pour vous et vos enfants",
-                  "Médicaments et ordonnances",
-                  "Clés de rechange (voiture et maison)",
-                  "Argent liquide et cartes de crédit",
+                  t("cards.identity_document"),
+                  t("cards.birth_certificates"),
+                  t("cards.medications"),
+                  t("cards.spare_keys"),
+                  t("cards.cash_cards"),
                 ]}
               />
             </div>
@@ -484,14 +539,13 @@ export default function App() {
                 <IconHome size={20} className="sm:w-6 sm:h-6" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-primary">
-                Hébergement d'Urgence
+                {t("cards.emergency_housing")}
               </h3>
               <p className="text-primary/70 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                Trouvez des refuges sûrs et des options d'hébergement d'urgence
-                dans votre région immédiate.
+                {t("cards.emergency_housing_description")}
               </p>
               <button className="text-primary font-bold hover:text-accent w-fit flex items-center gap-1 group cursor-pointer min-h-[48px] sm:min-h-0 text-sm sm:text-base">
-                Trouver des refuges{" "}
+                {t("cards.find_shelters")}{" "}
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
@@ -504,14 +558,13 @@ export default function App() {
                 <IconShield size={20} className="sm:w-6 sm:h-6" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-primary">
-                Droits Légaux et Police
+                {t("cards.legal_rights")}
               </h3>
               <p className="text-primary/70 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                Comprenez vos options pour les ordonnances de protection, les
-                signalements aux forces de l'ordre et vos droits légaux.
+                {t("cards.legal_rights_description")}
               </p>
               <button className="text-primary font-bold hover:text-accent w-fit flex items-center gap-1 group cursor-pointer min-h-[48px] sm:min-h-0 text-sm sm:text-base">
-                Lire le guide{" "}
+                {t("cards.read_guide")}{" "}
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
@@ -525,21 +578,20 @@ export default function App() {
       <footer className="mt-12 sm:mt-20 border-t border-border/20 bg-card py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-center md:text-left">
           <div className="text-secondary font-medium text-sm sm:text-base">
-            N'oubliez pas : Appuyez deux fois sur ÉCHAP ou cliquez sur QUITTER
-            pour partir immédiatement.
+            {t("footer.reminder")}
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-primary/70 font-medium">
             <a
               href="#"
               className="hover:text-primary min-h-[32px] sm:min-h-0 flex items-center justify-center"
             >
-              Lignes d'Assistance Nationales
+              {t("footer.national_hotlines")}
             </a>
             <a
               href="#"
               className="hover:text-primary min-h-[32px] sm:min-h-0 flex items-center justify-center"
             >
-              Outil d'Effacement de Cache
+              {t("footer.clear_cache")}
             </a>
           </div>
         </div>
@@ -550,7 +602,7 @@ export default function App() {
         <div className="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 w-full sm:w-80 bg-white sm:rounded-xl rounded-t-xl shadow-2xl border border-border overflow-hidden z-40 flex flex-col">
           <div className="bg-primary text-primary-foreground p-3 sm:p-4 flex justify-between items-center">
             <div className="font-bold flex items-center gap-2">
-              <IconShield size={16} /> Chat Sécurisé
+              <IconShield size={16} /> {t("chat.title")}
             </div>
             <button
               onClick={() => setChatOpen(false)}
@@ -561,8 +613,7 @@ export default function App() {
           </div>
           {/* <div className="h-[40vh] sm:h-64 p-3 sm:p-4 bg-gray-50 flex flex-col gap-3 overflow-y-auto">
             <div className="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none w-[90%] sm:w-5/6 text-sm">
-              Bonjour. Vous êtes connecté(e) à une Intelligence Artificielle sécurisée
-              et confidentielle. Comment pouvons-nous vous aider ?
+              {t("chat.welcome")}
             </div>
           </div> */}
           <div className="h-[40vh] sm:h-64 p-3 sm:p-4 bg-gray-50 flex flex-col gap-3 overflow-y-auto">
@@ -587,12 +638,12 @@ export default function App() {
           <div className="p-3 bg-white border-t border-gray-200 flex gap-2">
             {/* <input
               type="text"
-              placeholder="Tapez votre message..."
+              placeholder={t("chat.input_placeholder")}
               className="flex-grow border border-gray-300 rounded-md px-3 py-2 text-base focus:outline-none focus:border-primary min-h-[48px]"
             /> */}
               <input
                 type="text"
-                placeholder="Tapez votre message..."
+                placeholder={t("chat.input_placeholder")}
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 onKeyDown={(event) => {
@@ -610,7 +661,7 @@ export default function App() {
               disabled={isSending || !message.trim()}
               className="bg-primary text-primary-foreground px-4 rounded-md font-bold text-sm cursor-pointer min-h-[48px] disabled:opacity-50"
             >
-              {isSending ? "..." : "Envoyer"}
+              {isSending ? "..." : t("chat.send")}
             </button>
           </div>
           <div className="bg-gray-100 p-2 text-center">
@@ -618,8 +669,7 @@ export default function App() {
               onClick={() => setChatOpen(false)}
               className="text-xs font-semibold text-destructive hover:underline flex items-center justify-center gap-1 w-full cursor-pointer min-h-[32px] sm:min-h-[40px]"
             >
-              <IconAlertTriangle size={14} /> Supprimer la conversation et
-              fermer
+              <IconAlertTriangle size={14} /> {t("chat.delete_and_close")}
             </button>
           </div>
         </div>
@@ -637,6 +687,7 @@ function SafetyChecklistModal({
 }) {
   const [isOpen, setIsOpen] = useState(false)
   const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({})
+  const { t } = useTranslation()
 
   const handleOpen = () => {
     setCheckedItems({})
@@ -649,7 +700,7 @@ function SafetyChecklistModal({
         onClick={handleOpen}
         className="text-primary font-bold hover:text-accent w-fit flex items-center gap-1 group cursor-pointer min-h-[48px] sm:min-h-0 text-sm sm:text-base"
       >
-        Voir la liste de contrôle{" "}
+        {t("cards.view_checklist")}{" "}
         <span className="group-hover:translate-x-1 transition-transform">
           →
         </span>
@@ -671,9 +722,8 @@ function SafetyChecklistModal({
             </div>
             <div className="p-4 sm:p-6 overflow-y-auto flex-grow">
               <p className="text-secondary mb-6 text-sm bg-accent/10 p-3 sm:p-4 rounded-lg border border-accent/20">
-                <strong>Note de confidentialité :</strong> Cette liste de
-                contrôle n'enregistre pas votre progression. Une fois cette
-                fenêtre fermée, vos sélections seront effacées.
+                <strong>{t("checklist.privacy_note_title")}</strong>{" "}
+                {t("checklist.privacy_note")}
               </p>
               <div className="space-y-4">
                 {items.map((item, idx) => (
@@ -711,7 +761,7 @@ function SafetyChecklistModal({
                 onClick={() => setIsOpen(false)}
                 className="bg-primary text-primary-foreground px-6 py-3 sm:py-2 rounded-radius font-semibold hover:opacity-90 cursor-pointer min-h-[48px] w-full sm:w-auto"
               >
-                Terminé
+                {t("checklist.done")}
               </button>
             </div>
           </div>

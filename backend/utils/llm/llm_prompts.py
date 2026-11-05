@@ -44,6 +44,8 @@ Voici les différents éléments que tu peux lui conseiller:
 
 Réponds de manière concise et claire, en donnant des conseils appropriés basés sur les éléments fournis.
 Assure-toi que tes réponses sont compréhensibles et utiles pour la personne qui a fourni les informations.
+Réponds exclusivement en {language}. Les instructions et les données internes peuvent être en français,
+mais le message final destiné à la personne doit être entièrement écrit dans cette langue.
 Réponds en ne donnant que des conseils, sans structurer la réponses selon les champs de situation ou de condition.
 
 Ta réponse doit faire maximum 3 phrases et 200 mots maximum.
