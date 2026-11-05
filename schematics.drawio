@@ -1,0 +1,103 @@
+<mxfile host="65bd71144e">
+    <diagram id="eqMuTlCVtCXHHVamqGS1" name="Page-1">
+        <mxGraphModel dx="930" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-2" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-1" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-1" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Message initial" vertex="1">
+                    <mxGeometry height="80" width="120" x="20" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-4" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-3" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-5" connectable="0" parent="wohiu0mglRiTuRXo4TP6-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="Si pas sûr" vertex="1">
+                    <mxGeometry relative="1" x="-0.5" y="-3" as="geometry">
+                        <mxPoint x="15" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-8" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-3" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-20" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-3" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wohiu0mglRiTuRXo4TP6-9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-3" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Différence Conflit/Violence" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-10" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-6" style="edgeStyle=none;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="wohiu0mglRiTuRXo4TP6-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-6" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&quot;Pouvez-vous donner plus de détails&quot; ?" vertex="1">
+                    <mxGeometry height="80" width="120" x="240" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-9" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Si Violence" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-12" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&quot;Il s&#39;agit d&#39;un conflit&quot;" vertex="1">
+                    <mxGeometry height="80" width="120" x="240" y="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Si uniquement conflit" vertex="1">
+                    <mxGeometry height="30" width="100" x="140" y="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-14" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-9" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-15;" value="Réponse de la personne" vertex="1">
+                    <mxGeometry height="30" width="100" x="140" y="182" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-19" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-17" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wohiu0mglRiTuRXo4TP6-18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-17" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Combinaison de violences" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-22" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-18" style="edgeStyle=none;html=1;" target="wohiu0mglRiTuRXo4TP6-21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-18" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Vérification des conditions pour les actions" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-23" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-21" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-24" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-21" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-21" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Actions Recommendations" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-25" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&quot;Voici ce que je vous conseille de faire&quot;" vertex="1">
+                    <mxGeometry height="80" width="120" x="240" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-26" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&quot;Avez-vous des enfants ?&quot;" vertex="1">
+                    <mxGeometry height="80" width="120" x="420" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-27" edge="1" parent="1" source="wohiu0mglRiTuRXo4TP6-25" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=-15;entryPerimeter=0;" target="wohiu0mglRiTuRXo4TP6-26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="wohiu0mglRiTuRXo4TP6-28" connectable="0" parent="wohiu0mglRiTuRXo4TP6-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="Si &quot;enfants&quot;&lt;br&gt;pas validé" vertex="1">
+                    <mxGeometry relative="1" x="-0.3222" y="3" as="geometry">
+                        <mxPoint x="10" y="-22" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
