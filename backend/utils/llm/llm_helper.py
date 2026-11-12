@@ -25,19 +25,19 @@ def violence_criteria_concatenation() -> str:
         violence_text += f"## {title}:\n{criterion}\n\n"
     return violence_text.rstrip()
 
-def condition_criteria_concatenation(situation : Situation) -> str:
+def condition_criteria_concatenation(violence : str) -> str:
     """
     Concatenates the conditions based on the situation and condition provided.
 
     Args:
-        situation (Situation): An instance of the Situation class representing the current situation.
+        violence (str): The type of violence to concatenate conditions for.
 
     Returns:
         str: The concatenated conditions.
     """
     conditions_criteria = load_conditions_criteria()
     condition_text = ""
-    for action, cond in zip(condition_titles, conditions_criteria.loc[situation.violence_type]):
+    for action, cond in zip(condition_titles, conditions_criteria.loc[violence]):
         if cond:
             condition_text += f"## {action}:\n{cond}\n\n"
     return condition_text.rstrip()
@@ -60,5 +60,4 @@ def condition_answer_concatenation(situation : Situation, condition : Condition)
     for action, cond in zip(validated_condition_titles, answers_df.loc[violence_type][condition.mask]):
         if cond:
             answers += f"## {action}:\n{cond}\n\n"
-    return answers.rstrip()
-        
+    return answers.rstrip()        

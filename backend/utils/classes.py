@@ -30,32 +30,33 @@ class Situation(BaseModel):
     children_involved : bool = Field(description="Indicates if children are involved in the situation.", default=False)
     forced_marriage : bool = Field(description="Indicates if there is a situation of forced marriage.", default=False)
 
-    _VIOLENCE_MAP : ClassVar[Dict[Tuple[bool, bool, bool, bool], str]] = {
-        (False, False, False, False): "None",
-        (True, False, False, False): "PHY",
-        (False, True, False, False): "SEX",
-        (False, False, True, False): "PSY",
-        (False, False, False, True): "ECO",
-        (True, True, False, False): "PHY_SEX",
-        (True, False, True, False): "PHY_PSY",
-        (True, False, False, True): "PHY_ECO",
-        (False, True, True, False): "SEX_PSY",
-        (False, True, False, True): "SEX_ECO",
-        (False, False, True, True): "PSY_ECO",
-        (True, True, True, False): "PHY_SEX_PSY",
-        (True, True, False, True): "PHY_SEX_ECO",
-        (True, False, True, True): "PHY_PSY_ECO",
-        (False, True, True, True): "SEX_PSY_ECO",
-        (True, True, True, True): "PHY_SEX_PSY_ECO"
+
+    _VIOLENCE_MAP : ClassVar[Dict[Tuple[bool, bool, bool, bool], List[str]]] = {
+        (False, False, False, False): ["CON"],
+        (True, False, False, False): ["PHY"],
+        (False, True, False, False): ["SEX"],
+        (False, False, True, False): ["PSY"],
+        (False, False, False, True): ["ECO"],
+        (True, True, False, False): ["PHY", "SEX"],
+        (True, False, True, False): ["PHY", "PSY"],
+        (True, False, False, True): ["PHY", "ECO"],
+        (False, True, True, False): ["SEX", "PSY"],
+        (False, True, False, True): ["SEX", "ECO"],
+        (False, False, True, True): ["PSY", "ECO"],
+        (True, True, True, False): ["PHY", "SEX", "PSY"],
+        (True, True, False, True): ["PHY", "SEX", "ECO"],
+        (True, False, True, True): ["PHY", "PSY", "ECO"],
+        (False, True, True, True): ["SEX", "PSY", "ECO"],
+        (True, True, True, True): ["PHY", "SEX", "PSY", "ECO"]
     }
 
     @property
-    def violence_type(self) -> str:
+    def violence_types(self) -> List[str]:
         """
         Determines the type of violence based on the boolean attributes of the situation.
         
         Returns:
-            str: A description of the type of violence present in the situation.
+            List[str]: A list of strings describing the type of violence present in the situation.
         """
         return self._VIOLENCE_MAP[(self.physical_violence, self.sexual_violence, self.psychological_violence, self.economical_violence)]
 
