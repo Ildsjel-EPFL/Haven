@@ -3,7 +3,7 @@ from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.graph import add_messages
 from typing import Annotated, Tuple
 
-from utils.classes import Situation, Condition
+from utils.classes import Condition
 from data.data_loader import load_violence_criteria, violence_titles, load_conditions_criteria, load_answers, condition_titles
 
 def find_last_message(message : Annotated[BaseMessage, add_messages]) -> Tuple[BaseMessage, BaseMessage]:
@@ -42,22 +42,24 @@ def condition_criteria_concatenation(violence : str) -> str:
             condition_text += f"## {action}:\n{cond}\n\n"
     return condition_text.rstrip()
 
-def condition_answer_concatenation(situation : Situation, condition : Condition) -> str:
+def condition_answer_concatenation(violence: str, condition: Condition) -> str:
     """
     Concatenates the answers based on the situation and condition provided.
     
     Args:
-        situation (Situation): An instance of the Situation class representing the current situation.
-        condition (Condition): An instance of the Condition class representing the current condition.
+        violence: The violence code used to select the correct answers.
+        condition: The evaluated conditions for that violence.
 
     Returns:
         str: The concatenated answers.
     """
-    answers = ""
-    violence_type = situation.violence_type
     answers_df = load_answers()
-    validated_condition_titles = [action for action, cond in zip(condition_titles, condition.mask) if cond]
-    for action, cond in zip(validated_condition_titles, answers_df.loc[violence_type][condition.mask]):
-        if cond:
-            answers += f"## {action}:\n{cond}\n\n"
-    return answers.rstrip()        
+    return "\n\n".join(
+        f"## {action}:\n{answer}"
+        for action, enabled, answer in zip(
+            condition_titles,
+            condition.mask,
+            answers_df.loc[violence],
+        )
+        if enabled
+    )

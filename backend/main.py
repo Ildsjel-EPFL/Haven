@@ -48,8 +48,8 @@ def chat(request: ChatRequest) -> ChatResponse:
         },
     )
     
-    print(f'Situation: {result.get("situation")}, {result.get("situation").violence_type}\n')
-    print(f'Condition: {result.get("condition")}')
+    print(f'Situation: {result.get("situation")}\n')
+    print(f'Conditions: {result.get("conditions")}')
     return ChatResponse(
         response=result.get("response", "Aucune réponse générée.")
     )

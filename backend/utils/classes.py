@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Tuple, Dict, ClassVar
+from typing import ClassVar, Dict, List, Tuple
 
 class Situation(BaseModel):
     """
@@ -21,14 +21,16 @@ class Situation(BaseModel):
     """
     # security_emergency : bool = Field(description="Indicates if there is a security emergency.")
     # health_emergency : bool = Field(description="Indicates if there is a health emergency.")
-    conflict : bool = Field(description="Indicates if there is a conflict situation.", default=False)
-    physical_violence : bool = Field(description="Indicates if there is a situation of physical violence.", default=False)
-    sexual_violence : bool = Field(description="Indicates if there is a situation of sexual violence.", default=False)
-    psychological_violence : bool = Field(description="Indicates if there is a situation of psychological violence.", default=False)
-    economical_violence : bool = Field(description="Indicates if there is a situation of economical violence.", default=False)
-    residential_permit : bool = Field(description="Indicates if there is a situation related to residential permits.", default=False)
-    children_involved : bool = Field(description="Indicates if children are involved in the situation.", default=False)
-    forced_marriage : bool = Field(description="Indicates if there is a situation of forced marriage.", default=False)
+    conflict : bool | None = Field(description="Indicates if there is a conflict situation. Use null when unknown.", default=None)
+    physical_violence : bool | None = Field(description="Indicates physical violence. Use null when unknown.", default=None)
+    sexual_violence : bool | None = Field(description="Indicates sexual violence. Use null when unknown.", default=None)
+    psychological_violence : bool | None = Field(description="Indicates psychological violence. Use null when unknown.", default=None)
+    economical_violence : bool | None = Field(description="Indicates economic violence. Use null when unknown.", default=None)
+    residential_permit : bool | None = Field(description="Indicates a residential permit issue. Use null when unknown.", default=None)
+    children_involved : bool | None = Field(description="Indicates whether children are involved. Use null when unknown.", default=None)
+    forced_marriage : bool | None = Field(description="Indicates forced marriage. Use null when unknown.", default=None)
+    needs_clarification : bool = Field(description="Indicates whether more information is required.", default=False)
+    clarification_reason : str | None = Field(description="Explains which information is missing or ambiguous.", default=None)
 
 
     _VIOLENCE_MAP : ClassVar[Dict[Tuple[bool, bool, bool, bool], List[str]]] = {
@@ -58,7 +60,19 @@ class Situation(BaseModel):
         Returns:
             List[str]: A list of strings describing the type of violence present in the situation.
         """
-        return self._VIOLENCE_MAP[(self.physical_violence, self.sexual_violence, self.psychological_violence, self.economical_violence)]
+        return [
+            violence
+            for enabled, violence in zip(
+                (
+                    self.physical_violence,
+                    self.sexual_violence,
+                    self.psychological_violence,
+                    self.economical_violence,
+                ),
+                ("PHY", "SEX", "PSY", "ECO"),
+            )
+            if enabled is True
+        ]
 
 class Condition(BaseModel):
     """
