@@ -1,6 +1,7 @@
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.state import CompiledStateGraph
+from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
 
 from evaluation.evaluation import classify_situation_node
 from response.response import (
@@ -10,6 +11,7 @@ from response.response import (
     violence_response_node,
 )
 from utils.llm.llm_state import ChatbotState
+from utils.classes import Condition, Situation
 
 
 def route_after_classification(state: ChatbotState) -> str:
@@ -45,6 +47,17 @@ def build_graph() -> CompiledStateGraph:
     workflow.add_edge("violence_response", END)
     workflow.add_edge("conflict_response", END)
     workflow.add_edge("clarification_response", END)
+
+    allowed_types = (
+        Condition,
+        Situation,
+        f"{Condition.__module__}.{Condition.__qualname__}",
+        f"{Situation.__module__}.{Situation.__qualname__}",
+    )
+    serde = JsonPlusSerializer(allowed_msgpack_modules=allowed_types)
+
+    # A checkpointer is required for the `interrupt` feature to save state
+    memory = MemorySaver(serde=serde)
 
     return workflow.compile(checkpointer=MemorySaver())
 
