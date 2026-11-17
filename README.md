@@ -16,6 +16,8 @@ If someone is in immediate danger, contact the local emergency service first.
 - Help identify whether a situation may involve conflict or physical, sexual,
   psychological, or economic violence.
 - Suggest practical next steps based on the information shared.
+- Ask at most two follow-up clarification questions before providing the best
+  available response.
 - Offer a quick-exit button that takes the browser to another website.
 
 ## Run Haven on a computer

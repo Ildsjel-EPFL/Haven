@@ -25,20 +25,34 @@ needs_clarification, clarification_reason.
 """
 
 condition_evaluation_prompt = """
-Tu es un répondant professionnel qui évalue les situations de violence domestique.
+Tu évalues les conditions uniquement à partir de cette conversation :
 
-La personne a fourni les informations suivantes sur la situation de violence domestique :
-{messages}.
+--- Début de la conversation ---
+{messages}
+--- Fin de la conversation ---
 
-Voici les critères qui doivent être pris en compte pour donner les conseils appropriés :
-{criteria}.
+Voici les critères à appliquer :
+{criteria}
 
-Détermine quelles conditions sont présentes dans la situation. Les conditions sont des actions ou des circonstances spécifiques qui peuvent influencer la manière dont la situation est évaluée.
+Détermine quelles conditions sont présentes dans la situation.
+N'invente aucune information et considère toute la conversation.
 
-
-REGLES STRICTES : Réponds uniquement avec un objet JSON contenant exactement ces onze champs booléens :
-police, pack_your_things, leave_home, gather_docs, preserve_evidence, medical_report, counselling_support_group, neighbour, lavi, fin_legal_psy_support, assets_protection.
+RÈGLES STRICTES : réponds uniquement avec un objet JSON contenant exactement les champs définis par le schéma.
 """
+# Tu es un répondant professionnel qui évalue les situations de violence domestique.
+
+# La personne a fourni les informations suivantes sur la situation de violence domestique :
+# {messages}.
+
+# Voici les critères qui doivent être pris en compte pour donner les conseils appropriés :
+# {criteria}.
+
+# Détermine quelles conditions sont présentes dans la situation. Les conditions sont des actions ou des circonstances spécifiques qui peuvent influencer la manière dont la situation est évaluée.
+
+
+# REGLES STRICTES : Réponds uniquement avec un objet JSON contenant exactement ces champs booléens :
+# police, pack_your_things, leave_home, gather_docs, preserve_evidence, medical_report, counselling_support_group, neighbour, lavi, fin_legal_psy_support, assets_protection, humiliation_recognition, doubt_recognition, responsibility_recognition, isolation_support, daily_control_recognition, digital_privacy_protection, intimidation_threats_handling, children_threats_handling, harassment_handling, self_harm_threats_handling, private_informations_revelation_threats_handling.
+# """
 
 violence_response_prompt = """
 Tu es un répondant professionnel qui évalue les situations de violence domestique.
@@ -63,6 +77,10 @@ Utilise un langage simple et rassurant, en évitant les termes techniques ou jur
 Si des informations sont encore inconnues, pose une question naturelle à leur sujet après les conseils.
 Réponds uniquement avec le message destiné à la personne.
 Ne renvoie pas de JSON, ne renvoie pas de code et n'ajoute pas de champ "response".
+
+Réponds uniquement aux nouvelles informations apportées dans le dernier message.
+Ne répète pas les conseils déjà donnés dans la réponse précédente.
+Si aucun élément nouveau n'est apporté, réponds brièvement sans reformuler toute la réponse.
 """
 
 clarification_response_prompt = """
@@ -84,5 +102,18 @@ La conversation suivante décrit un conflit, mais aucune violence n'est actuelle
 
 Réponds exclusivement en {language}. Explique brièvement qu'il s'agit plutôt d'un conflit,
 reste empathique et demande si la personne se sent en danger ou si des actes de violence ont eu lieu.
+Réponds uniquement avec le message destiné à la personne.
+"""
+
+general_response_prompt = """
+Tu es un répondant professionnel qui aide une personne confrontée à une situation difficile.
+
+La conversation est la suivante :
+{messages}
+
+Les informations disponibles ne permettent pas d'identifier clairement une forme de violence
+ou un conflit. Réponds avec empathie et donne des conseils généraux de sécurité et de soutien,
+sans poser de nouvelle question et sans inventer de faits.
+Réponds exclusivement en {language}, avec un langage simple et rassurant.
 Réponds uniquement avec le message destiné à la personne.
 """

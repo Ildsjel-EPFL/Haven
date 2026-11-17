@@ -11,6 +11,7 @@ class ChatbotState(TypedDict):
     situation: NotRequired[Situation]
     needs_clarification: NotRequired[bool]
     clarification_reason: NotRequired[str | None]
+    clarification_attempts: NotRequired[int]
     pending_questions: NotRequired[list[str]]
 
     conditions: NotRequired[dict[str, Condition]]

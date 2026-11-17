@@ -90,6 +90,17 @@ class Condition(BaseModel):
         lavi (bool): Indicates if the person should contact LAVI.
         fin_legal_psy_support (bool): Indicates if the person should seek financial, legal, or psychological support.
         assets_protection (bool): Indicates if the person should take measures for asset protection.
+        humiliation_recognition (bool): Indicates if the person should recognize humiliations and devaluations.
+        doubt_recognition (bool): Indicates if the person should recognize when the other makes them doubt their experiences.
+        responsibility_recognition (bool): Indicates if the person should recognize when the other makes them responsible for their behaviors.
+        isolation_support (bool): Indicates if the person should seek support to overcome isolation.
+        daily_control_recognition (bool): Indicates if the person should recognize control over their daily life.
+        digital_privacy_protection (bool): Indicates if the person should protect their digital exchanges and privacy.
+        intimidation_threats_handling (bool): Indicates if the person should handle intimidation and threats.
+        children_threats_handling (bool): Indicates if the person should handle threats concerning children.
+        harassment_handling (bool): Indicates if the person should handle harassment and imposed contacts.
+        self_harm_threats_handling (bool): Indicates if the person should handle threats of self-harm or suicide from the other.
+        private_informations_revelation_threats_handling (bool): Indicates if the person should handle threats of private information being revealed.
     """
     police : bool = Field(description="Indicates if police intervention is required.", default=False)
     pack_your_things : bool = Field(description="Indicates if the person should pack their things.", default=False)
@@ -102,6 +113,17 @@ class Condition(BaseModel):
     lavi : bool = Field(description="Indicates if the person should contact LAVI.", default=False)
     fin_legal_psy_support : bool = Field(description="Indicates if the person should seek financial, legal, or psychological support.", default=False)
     assets_protection : bool = Field(description="Indicates if the person should take measures for asset protection.", default=False)
+    humiliation_recognition : bool = Field(description="Indicates if the person should recognize humiliations and devaluations.", default=False)
+    doubt_recognition : bool = Field(description="Indicates if the person should recognize when the other makes them doubt their experiences.", default=False)
+    responsibility_recognition : bool = Field(description="Indicates if the person should recognize when the other makes them responsible for their behaviors.", default=False)
+    isolation_support : bool = Field(description="Indicates if the person should seek support to overcome isolation.", default=False)
+    daily_control_recognition : bool = Field(description="Indicates if the person should recognize control over their daily life.", default=False)
+    digital_privacy_protection : bool = Field(description="Indicates if the person should protect their digital exchanges and privacy.", default=False)
+    intimidation_threats_handling : bool = Field(description="Indicates if the person should handle intimidation and threats.", default=False)
+    children_threats_handling : bool = Field(description="Indicates if the person should handle threats concerning children.", default=False)
+    harassment_handling : bool = Field(description="Indicates if the person should handle harassment and imposed contacts.", default=False)
+    self_harm_threats_handling : bool = Field(description="Indicates if the person should handle threats of self-harm or suicide from the other.", default=False)
+    private_informations_revelation_threats_handling : bool = Field(description="Indicates if the person should handle threats of private information being revealed.", default=False)
 
     @property
     def mask(self) -> List[bool]:
@@ -116,8 +138,19 @@ class Condition(BaseModel):
             self.neighbour,
             self.lavi,
             self.fin_legal_psy_support,
-            self.assets_protection
-        ]
+            self.assets_protection,
+            self.humiliation_recognition,
+            self.doubt_recognition,
+            self.responsibility_recognition,
+            self.isolation_support,
+            self.daily_control_recognition,
+            self.digital_privacy_protection,
+            self.intimidation_threats_handling,
+            self.children_threats_handling,
+            self.harassment_handling,
+            self.self_harm_threats_handling,
+            self.private_informations_revelation_threats_handling,
+            ]
 
 class ChatRequest(BaseModel):
     """

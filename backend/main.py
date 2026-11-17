@@ -50,6 +50,7 @@ def chat(request: ChatRequest) -> ChatResponse:
     
     print(f'Situation: {result.get("situation")}\n')
     print(f'Conditions: {result.get("conditions")}')
+    print(f"User ID: {request.session_id}")
     return ChatResponse(
         response=result.get("response", "Aucune réponse générée.")
     )
