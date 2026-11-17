@@ -1,4 +1,76 @@
 {
+  "landing_page": {
+    "hero_title": "Ju nuk jeni vetëm. Mbështetje falas dhe konfidenciale 24/7.",
+    "hero_description": "Ne jemi këtu për t'ju ndihmuar të gjeni siguri, burime dhe mbështetje. Bisedoni me një profesionist(e) tani.",
+    "call_support": "Telefononi linjën e ndihmës",
+    "confidential_chat": "Bisedë konfidenciale",
+    "phone_note": "Shënim: Thirrjet standarde telefonike mund të shfaqen në faturat e celularit. Përdorni një linjë publike nëse jeni duke u monitoruar.",
+    "redirection": "Ridrejtimi"
+  },
+  "camouflage_page": {
+    "title": "Shefi i Kuzhinës në Shtëpi",
+    "recipe_title": "Receta të Shpejta me Makarona | Shefi i Kuzhinës në Shtëpi",
+    "quick_exit": "Dalje e shpejtë",
+    "recipe_description": "Kjo darkë e lehtë gjatë javës është perfekte kur keni pak kohë, por dëshironi diçka të shijshme.",
+    "ingredients": "Përbërësit",
+    "ingredients_list": "<li>500g makarona penne</li><li>2 gota domate qershi</li><li>1/2 gotë pana</li><li>Borzilok i freskët</li><li>2 thelpinj hudhër, të grira</li>",
+    "view_label": "Pamja e Kamuflimit",
+    "leave_view": "Dil nga pamja",
+    "back": "Kthehu"
+  },
+  "quick_exit": {
+    "hide_page": "Fshih këtë faqe",
+    "double_escape": "Shtypni dy herë Esc për të dalë",
+    "label": "Dalje e Shpejtë"
+  },
+  "warning": {
+    "emergency_notice": "Njoftim emergjent:",
+    "internet_monitoring": "Përdorimi i internetit mund të monitorohet. Mësoni si të",
+    "clear_history": "fshini historikun tuaj"
+  },
+  "navigation": {
+    "support": "Mbështetje:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Mbështetje në raste krize"
+  },
+  "cards": {
+    "immediate_escape_plan": "Plani i Menjëhershëm i Largimit",
+    "immediate_escape_description": "Një listë kontrolli e dokumenteve thelbësore, çelësave dhe ilaçeve që duhen marrë nëse duhet të largoheni shpejt.",
+    "identity_document": "Dokument identifikimi (Patentë shoferi, Pasaportë)",
+    "birth_certificates": "Certifikatat e lindjes për ju dhe fëmijët tuaj",
+    "medications": "Ilaçet dhe recetat mjekësore",
+    "spare_keys": "Çelësa rezervë (të makinës dhe shtëpisë)",
+    "cash_cards": "Para në dorë dhe karta krediti",
+    "emergency_housing": "Strehim Emergjent",
+    "emergency_housing_description": "Gjeni strehimore të sigurta dhe mundësi strehimi emergjent në zonën tuaj të afërt.",
+    "find_shelters": "Gjeni strehimore",
+    "legal_rights": "Të Drejtat Ligjore dhe Policia",
+    "legal_rights_description": "Kuptoni mundësitë tuaja për urdhrat e mbrojtjes, raportimin në polici dhe të drejtat tuaja ligjore.",
+    "read_guide": "Lexoni udhëzuesin",
+    "view_checklist": "Shikoni listën e kontrollit"
+  },
+  "chat": {
+    "title": "Bisedat tuaja janë private dhe asnjë e dhënë nuk ruhet.",
+    "welcome": "Përshëndetje. Jeni lidhur me një Inteligjencë Artificiale të sigurt dhe konfidenciale. Si mund t'ju ndihmojmë?",
+    "input_placeholder": "Shkruani mesazhin tuaj...",
+    "send": "Dërgo",
+    "delete_and_close": "Fshini bisedën dhe mbylleni"
+  },
+  "footer": {
+    "reminder": "Mos harroni: Shtypni dy herë ESC ose klikoni DIL për t'u larguar menjëherë.",
+    "national_hotlines": "Linjat Kombëtare të Ndihmës",
+    "clear_cache": "Mjeti për Pastrimin e Cache"
+  },
+  "checklist": {
+    "privacy_note_title": "Shënim privatësie:",
+    "privacy_note": "Kjo listë kontrolli nuk e ruan progresin tuaj. Pasi të mbyllet kjo dritare, zgjedhjet tuaja do të fshihen.",
+    "done": "Përfundoi"
+  },
+  "errors": {
+    "chat_request": "Ndodhi një gabim. Ju lutemi provoni përsëri."
+  },
   "language": {
     "select": "Zgjidhni gjuhën"
   }

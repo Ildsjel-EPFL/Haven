@@ -1,5 +1,77 @@
 {
+  "landing_page": {
+    "hero_title": "Sie sind nicht allein. Kostenlose und vertrauliche Unterstützung rund um die Uhr.",
+    "hero_description": "Wir sind hier, um Ihnen zu helfen, Sicherheit, Ressourcen und Unterstützung zu finden. Chatten Sie jetzt mit einer Fachkraft.",
+    "call_support": "Hilfetelefon anrufen",
+    "confidential_chat": "Vertraulicher Chat",
+    "phone_note": "Hinweis: Normale Telefonanrufe können auf Mobilfunkrechnungen erscheinen. Nutzen Sie einen öffentlichen Anschluss, wenn Sie überwacht werden.",
+    "redirection": "Weiterleitung"
+  },
+  "camouflage_page": {
+    "title": "Chefkoch für Zuhause",
+    "recipe_title": "Schnelle Pasta-Rezepte | Chefkoch für Zuhause",
+    "quick_exit": "Schnell verlassen",
+    "recipe_description": "Dieses einfache Abendessen unter der Woche ist perfekt, wenn Sie wenig Zeit haben, sich aber nach etwas Wohltuendem sehnen.",
+    "ingredients": "Zutaten",
+    "ingredients_list": "<li>500g Penne-Nudeln</li><li>2 Tassen Kirschtomaten</li><li>1/2 Tasse Schlagsahne</li><li>Frisches Basilikum</li><li>2 Knoblauchzehen, gehackt</li>",
+    "view_label": "Tarnansicht",
+    "leave_view": "Ansicht verlassen",
+    "back": "Zurück"
+  },
+  "quick_exit": {
+    "hide_page": "Diese Seite ausblenden",
+    "double_escape": "Drücken Sie zweimal Esc, um die Seite zu verlassen",
+    "label": "Schnell Verlassen"
+  },
+  "warning": {
+    "emergency_notice": "Notfallhinweis:",
+    "internet_monitoring": "Die Internetnutzung kann überwacht werden. Erfahren Sie, wie Sie",
+    "clear_history": "Ihren Verlauf löschen"
+  },
+  "navigation": {
+    "support": "Unterstützung:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Krisenunterstützung"
+  },
+  "cards": {
+    "immediate_escape_plan": "Sofortiger Fluchtplan",
+    "immediate_escape_description": "Eine Checkliste mit wichtigen Dokumenten, Schlüsseln und Medikamenten, die Sie zusammenpacken sollten, wenn Sie schnell gehen müssen.",
+    "identity_document": "Ausweisdokument (Führerschein, Reisepass)",
+    "birth_certificates": "Geburtsurkunden für Sie und Ihre Kinder",
+    "medications": "Medikamente und Rezepte",
+    "spare_keys": "Ersatzschlüssel (Auto und Haus)",
+    "cash_cards": "Bargeld und Kreditkarten",
+    "emergency_housing": "Notunterkunft",
+    "emergency_housing_description": "Finden Sie sichere Zufluchtsorte und Notunterkünfte in Ihrer unmittelbaren Umgebung.",
+    "find_shelters": "Schutzräume finden",
+    "legal_rights": "Rechte und Polizei",
+    "legal_rights_description": "Verstehen Sie Ihre Möglichkeiten bezüglich Schutzanordnungen, Meldungen bei der Polizei und Ihrer gesetzlichen Rechte.",
+    "read_guide": "Leitfaden lesen",
+    "view_checklist": "Checkliste ansehen"
+  },
+  "chat": {
+    "title": "Ihre Gespräche sind privat und es werden keine Daten gespeichert.",
+    "welcome": "Hallo. Sie sind mit einer sicheren und vertraulichen Künstlichen Intelligenz verbunden. Wie können wir Ihnen helfen?",
+    "input_placeholder": "Geben Sie Ihre Nachricht ein...",
+    "send": "Senden",
+    "delete_and_close": "Gespräch löschen und schließen"
+  },
+  "footer": {
+    "reminder": "Denken Sie daran: Drücken Sie zweimal ESC oder klicken Sie auf VERLASSEN, um die Seite sofort zu schließen.",
+    "national_hotlines": "Nationale Hilfetelefone",
+    "clear_cache": "Tool zum Leeren des Caches"
+  },
+  "checklist": {
+    "privacy_note_title": "Datenschutzhinweis:",
+    "privacy_note": "Diese Checkliste speichert Ihren Fortschritt nicht. Sobald dieses Fenster geschlossen wird, wird Ihre Auswahl gelöscht.",
+    "done": "Fertig"
+  },
+  "errors": {
+    "chat_request": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
   "language": {
-    "select": "Sprache auswählen"
+    "select": "Sprache wählen"
   }
 }

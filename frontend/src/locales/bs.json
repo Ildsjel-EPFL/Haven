@@ -1,5 +1,77 @@
 {
+  "landing_page": {
+    "hero_title": "Niste sami. Besplatna i povjerljiva podrška 24/7.",
+    "hero_description": "Tu smo da vam pomognemo pronaći sigurnost, resurse i podršku. Razgovarajte sa stručnom osobom odmah.",
+    "call_support": "Pozovite liniju za podršku",
+    "confidential_chat": "Povjerljivi chat",
+    "phone_note": "Napomena: Standardni telefonski pozivi mogu se pojaviti na mobilnim računima. Koristite javnu liniju ako vas nadziru.",
+    "redirection": "Preusmjeravanje"
+  },
+  "camouflage_page": {
+    "title": "Kuhar kod Kuće",
+    "recipe_title": "Brzi Recepti za Tjesteninu | Kuhar kod Kuće",
+    "quick_exit": "Brzi izlaz",
+    "recipe_description": "Ova jednostavna večera radnim danom savršena je kada nemate puno vremena, ali želite nešto utješno.",
+    "ingredients": "Sastojci",
+    "ingredients_list": "<li>500g penne tjestenine</li><li>2 šolje cherry paradajza</li><li>1/2 šolje vrhnja za kuhanje</li><li>Svježi bosiljak</li><li>2 čehna bijelog luka, sitno isjeckana</li>",
+    "view_label": "Kamuflažni prikaz",
+    "leave_view": "Napusti prikaz",
+    "back": "Nazad"
+  },
+  "quick_exit": {
+    "hide_page": "Sakrij ovu stranicu",
+    "double_escape": "Pritisnite Esc dva puta za izlaz",
+    "label": "Brzi Izlaz"
+  },
+  "warning": {
+    "emergency_notice": "Hitno obavještenje:",
+    "internet_monitoring": "Korištenje interneta može biti nadzirano. Saznajte kako",
+    "clear_history": "izbrisati historiju pretraživanja"
+  },
+  "navigation": {
+    "support": "Podrška:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Podrška u kriznim situacijama"
+  },
+  "cards": {
+    "immediate_escape_plan": "Plan za Trenutni Bijeg",
+    "immediate_escape_description": "Kontrolna lista osnovnih dokumenata, ključeva i lijekova koje trebate prikupiti ako morate brzo otići.",
+    "identity_document": "Lični dokument (Vozačka dozvola, Pasoš)",
+    "birth_certificates": "Rodni listovi za vas i vašu djecu",
+    "medications": "Lijekovi i recepti",
+    "spare_keys": "Rezervni ključevi (automobil i kuća)",
+    "cash_cards": "Gotovina i kreditne kartice",
+    "emergency_housing": "Hitni Smještaj",
+    "emergency_housing_description": "Pronađite sigurne kuće i opcije hitnog smještaja u vašoj neposrednoj blizini.",
+    "find_shelters": "Pronađi skloništa",
+    "legal_rights": "Zakonska Prava i Policija",
+    "legal_rights_description": "Razumijte svoje opcije za mjere zabrane prilaska, prijavu policiji i svoja zakonska prava.",
+    "read_guide": "Pročitaj vodič",
+    "view_checklist": "Pogledaj kontrolnu listu"
+  },
+  "chat": {
+    "title": "Vaši razgovori su privatni i nikakvi podaci se ne pohranjuju.",
+    "welcome": "Zdravo. Povezani ste sa sigurnom i povjerljivom Umjetnom Inteligencijom. Kako vam možemo pomoći?",
+    "input_placeholder": "Upišite svoju poruku...",
+    "send": "Pošalji",
+    "delete_and_close": "Izbriši razgovor i zatvori"
+  },
+  "footer": {
+    "reminder": "Zapamtite: Pritisnite ESC dva puta ili kliknite IZLAZ da odmah napustite stranicu.",
+    "national_hotlines": "Nacionalne Linije za Pomoć",
+    "clear_cache": "Alat za Brisanje Predmemorije"
+  },
+  "checklist": {
+    "privacy_note_title": "Napomena o privatnosti:",
+    "privacy_note": "Ova kontrolna lista ne sprema vaš napredak. Kada zatvorite ovaj prozor, vaši odabiri će biti izbrisani.",
+    "done": "Gotovo"
+  },
+  "errors": {
+    "chat_request": "Došlo je do greške. Molimo pokušajte ponovo."
+  },
   "language": {
-    "select": "Izaberite jezik"
+    "select": "Odaberite jezik"
   }
 }

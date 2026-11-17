@@ -1,4 +1,76 @@
 {
+  "landing_page": {
+    "hero_title": "You are not alone. Free and confidential support 24/7.",
+    "hero_description": "We are here to help you find safety, resources, and support. Chat with a professional right now.",
+    "call_support": "Call Support Hotline",
+    "confidential_chat": "Confidential Chat",
+    "phone_note": "Note: Standard phone calls may appear on mobile bills. Use a public line if you are being monitored.",
+    "redirection": "Redirecting"
+  },
+  "camouflage_page": {
+    "title": "Chef at Home",
+    "recipe_title": "Quick Pasta Recipes | Chef at Home",
+    "quick_exit": "Quick exit",
+    "recipe_description": "This easy weeknight dinner is perfect when you're short on time but craving something comforting.",
+    "ingredients": "Ingredients",
+    "ingredients_list": "<li>500g penne pasta</li><li>2 cups cherry tomatoes</li><li>1/2 cup heavy cream</li><li>Fresh basil</li><li>2 cloves garlic, minced</li>",
+    "view_label": "Camouflage View",
+    "leave_view": "Leave view",
+    "back": "Back"
+  },
+  "quick_exit": {
+    "hide_page": "Hide this page",
+    "double_escape": "Press Esc twice to exit",
+    "label": "Quick Exit"
+  },
+  "warning": {
+    "emergency_notice": "Emergency Notice:",
+    "internet_monitoring": "Internet usage can be monitored. Learn how to",
+    "clear_history": "clear your history"
+  },
+  "navigation": {
+    "support": "Support:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Crisis Support"
+  },
+  "cards": {
+    "immediate_escape_plan": "Immediate Escape Plan",
+    "immediate_escape_description": "A checklist of essential documents, keys, and medications to gather if you need to leave quickly.",
+    "identity_document": "ID Document (Driver's license, Passport)",
+    "birth_certificates": "Birth certificates for you and your children",
+    "medications": "Medications and prescriptions",
+    "spare_keys": "Spare keys (car and house)",
+    "cash_cards": "Cash and credit cards",
+    "emergency_housing": "Emergency Housing",
+    "emergency_housing_description": "Find safe shelters and emergency housing options in your immediate area.",
+    "find_shelters": "Find shelters",
+    "legal_rights": "Legal Rights and Police",
+    "legal_rights_description": "Understand your options for restraining orders, law enforcement reporting, and your legal rights.",
+    "read_guide": "Read guide",
+    "view_checklist": "View checklist"
+  },
+  "chat": {
+    "title": "Your conversations are private and no data is stored.",
+    "welcome": "Hello. You are connected to a secure and confidential Artificial Intelligence. How can we help you?",
+    "input_placeholder": "Type your message...",
+    "send": "Send",
+    "delete_and_close": "Delete conversation and close"
+  },
+  "footer": {
+    "reminder": "Remember: Press ESC twice or click EXIT to leave immediately.",
+    "national_hotlines": "National Hotlines",
+    "clear_cache": "Cache Clearing Tool"
+  },
+  "checklist": {
+    "privacy_note_title": "Privacy note:",
+    "privacy_note": "This checklist does not save your progress. Once this window is closed, your selections will be erased.",
+    "done": "Done"
+  },
+  "errors": {
+    "chat_request": "An error occurred. Please try again."
+  },
   "language": {
     "select": "Select language"
   }

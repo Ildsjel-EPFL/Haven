@@ -1,5 +1,77 @@
 {
+  "landing_page": {
+    "hero_title": "Non sei solo/a. Supporto gratuito e confidenziale 24 ore su 24.",
+    "hero_description": "Siamo qui per aiutarti a trovare sicurezza, risorse e supporto. Chatta ora con un/a professionista.",
+    "call_support": "Chiama la linea di supporto",
+    "confidential_chat": "Chat confidenziale",
+    "phone_note": "Nota: Le chiamate telefoniche standard possono apparire sulle bollette del cellulare. Usa una linea pubblica se sei monitorato/a.",
+    "redirection": "Reindirizzamento"
+  },
+  "camouflage_page": {
+    "title": "Chef a Casa",
+    "recipe_title": "Ricette di Pasta Veloci | Chef a Casa",
+    "quick_exit": "Uscita rapida",
+    "recipe_description": "Questa cena facile infrasettimanale è perfetta quando hai poco tempo ma desideri qualcosa di confortante.",
+    "ingredients": "Ingredienti",
+    "ingredients_list": "<li>500g di pasta penne</li><li>2 tazze di pomodorini</li><li>1/2 tazza di panna fresca</li><li>Basilico fresco</li><li>2 spicchi d'aglio, tritati</li>",
+    "view_label": "Vista Camuffamento",
+    "leave_view": "Esci dalla vista",
+    "back": "Indietro"
+  },
+  "quick_exit": {
+    "hide_page": "Nascondi questa pagina",
+    "double_escape": "Premi due volte Esc per uscire",
+    "label": "Uscita Rapida"
+  },
+  "warning": {
+    "emergency_notice": "Avviso di emergenza:",
+    "internet_monitoring": "L'utilizzo di Internet può essere monitorato. Scopri come",
+    "clear_history": "cancellare la cronologia"
+  },
+  "navigation": {
+    "support": "Supporto:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Supporto in caso di crisi"
+  },
+  "cards": {
+    "immediate_escape_plan": "Piano di Fuga Immediato",
+    "immediate_escape_description": "Una lista di controllo dei documenti essenziali, chiavi e farmaci da raccogliere se devi andartene rapidamente.",
+    "identity_document": "Documento d'identità (Patente, Passaporto)",
+    "birth_certificates": "Certificati di nascita per te e i tuoi figli",
+    "medications": "Farmaci e prescrizioni mediche",
+    "spare_keys": "Chiavi di riserva (auto e casa)",
+    "cash_cards": "Contanti e carte di credito",
+    "emergency_housing": "Alloggio di Emergenza",
+    "emergency_housing_description": "Trova rifugi sicuri e opzioni di alloggio di emergenza nella tua zona.",
+    "find_shelters": "Trova rifugi",
+    "legal_rights": "Diritti Legali e Polizia",
+    "legal_rights_description": "Comprendi le tue opzioni per gli ordini di protezione, le segnalazioni alle forze dell'ordine e i tuoi diritti legali.",
+    "read_guide": "Leggi la guida",
+    "view_checklist": "Vedi la lista di controllo"
+  },
+  "chat": {
+    "title": "Le tue conversazioni sono private e nessun dato viene memorizzato.",
+    "welcome": "Ciao. Sei connesso/a a un'Intelligenza Artificiale sicura e confidenziale. Come possiamo aiutarti?",
+    "input_placeholder": "Scrivi il tuo messaggio...",
+    "send": "Invia",
+    "delete_and_close": "Elimina la conversazione e chiudi"
+  },
+  "footer": {
+    "reminder": "Ricorda: Premi due volte ESC o clicca su ESCI per abbandonare immediatamente la pagina.",
+    "national_hotlines": "Linee di Supporto Nazionali",
+    "clear_cache": "Strumento di Cancellazione Cache"
+  },
+  "checklist": {
+    "privacy_note_title": "Nota sulla privacy:",
+    "privacy_note": "Questa lista di controllo non salva i tuoi progressi. Una volta chiusa questa finestra, le tue selezioni verranno cancellate.",
+    "done": "Fatto"
+  },
+  "errors": {
+    "chat_request": "Si è verificato un errore. Riprova."
+  },
   "language": {
-    "select": "Seleziona lingua"
+    "select": "Seleziona la lingua"
   }
 }

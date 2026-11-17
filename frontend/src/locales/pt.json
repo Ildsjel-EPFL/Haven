@@ -1,4 +1,76 @@
 {
+  "landing_page": {
+    "hero_title": "Não está sozinho(a). Apoio gratuito e confidencial 24 horas por dia.",
+    "hero_description": "Estamos aqui para ajudar a encontrar segurança, recursos e apoio. Converse com um(a) profissional agora mesmo.",
+    "call_support": "Ligar para a linha de apoio",
+    "confidential_chat": "Chat confidencial",
+    "phone_note": "Nota: As chamadas telefónicas padrão podem aparecer nas faturas do telemóvel. Utilize uma linha pública se estiver a ser vigiado(a).",
+    "redirection": "Redirecionamento"
+  },
+  "camouflage_page": {
+    "title": "Chef em Casa",
+    "recipe_title": "Receitas Rápidas de Massa | Chef em Casa",
+    "quick_exit": "Saída rápida",
+    "recipe_description": "Este jantar fácil para os dias de semana é perfeito quando tem pouco tempo, mas deseja algo reconfortante.",
+    "ingredients": "Ingredientes",
+    "ingredients_list": "<li>500g de massa penne</li><li>2 chávenas de tomates cereja</li><li>1/2 chávena de natas</li><li>Manjericão fresco</li><li>2 dentes de alho picados</li>",
+    "view_label": "Vista de Camuflagem",
+    "leave_view": "Sair da vista",
+    "back": "Voltar"
+  },
+  "quick_exit": {
+    "hide_page": "Ocultar esta página",
+    "double_escape": "Pressione Esc duas vezes para sair",
+    "label": "Saída Rápida"
+  },
+  "warning": {
+    "emergency_notice": "Aviso de emergência:",
+    "internet_monitoring": "A utilização da Internet pode ser monitorizada. Saiba como",
+    "clear_history": "limpar o seu histórico"
+  },
+  "navigation": {
+    "support": "Apoio:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Apoio em situações de crise"
+  },
+  "cards": {
+    "immediate_escape_plan": "Plano de Fuga Imediata",
+    "immediate_escape_description": "Uma lista de verificação de documentos essenciais, chaves e medicamentos para reunir caso precise de sair rapidamente.",
+    "identity_document": "Documento de identificação (Carta de condução, Passaporte)",
+    "birth_certificates": "Certidões de nascimento para si e para os seus filhos",
+    "medications": "Medicamentos e receitas médicas",
+    "spare_keys": "Chaves suplentes (carro e casa)",
+    "cash_cards": "Dinheiro e cartões de crédito",
+    "emergency_housing": "Alojamento de Emergência",
+    "emergency_housing_description": "Encontre abrigos seguros e opções de alojamento de emergência na sua área imediata.",
+    "find_shelters": "Encontrar abrigos",
+    "legal_rights": "Direitos Legais e Polícia",
+    "legal_rights_description": "Compreenda as suas opções relativamente a ordens de proteção, denúncias às autoridades e os seus direitos legais.",
+    "read_guide": "Ler o guia",
+    "view_checklist": "Ver lista de verificação"
+  },
+  "chat": {
+    "title": "As suas conversas são privadas e nenhum dado é armazenado.",
+    "welcome": "Olá. Está ligado(a) a uma Inteligência Artificial segura e confidencial. Como podemos ajudar?",
+    "input_placeholder": "Escreva a sua mensagem...",
+    "send": "Enviar",
+    "delete_and_close": "Eliminar conversa e fechar"
+  },
+  "footer": {
+    "reminder": "Lembre-se: Pressione ESC duas vezes ou clique em SAIR para sair imediatamente.",
+    "national_hotlines": "Linhas de Apoio Nacionais",
+    "clear_cache": "Ferramenta de Limpeza de Cache"
+  },
+  "checklist": {
+    "privacy_note_title": "Nota de privacidade:",
+    "privacy_note": "Esta lista de verificação não guarda o seu progresso. Assim que esta janela for fechada, as suas seleções serão apagadas.",
+    "done": "Concluído"
+  },
+  "errors": {
+    "chat_request": "Ocorreu um erro. Por favor, tente novamente."
+  },
   "language": {
     "select": "Selecionar idioma"
   }

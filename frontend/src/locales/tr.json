@@ -1,4 +1,76 @@
 {
+  "landing_page": {
+    "hero_title": "Yalnız değilsiniz. 7/24 ücretsiz ve gizli destek.",
+    "hero_description": "Güvenlik, kaynak ve destek bulmanıza yardımcı olmak için buradayız. Hemen bir uzmanla sohbet edin.",
+    "call_support": "Destek Hattını Ara",
+    "confidential_chat": "Gizli Sohbet",
+    "phone_note": "Not: Standart telefon görüşmeleri cep telefonu faturalarında görünebilir. Takip ediliyorsanız halka açık bir hat kullanın.",
+    "redirection": "Yönlendiriliyor"
+  },
+  "camouflage_page": {
+    "title": "Evdeki Şef",
+    "recipe_title": "Pratik Makarna Tarifleri | Evdeki Şef",
+    "quick_exit": "Hızlı çıkış",
+    "recipe_description": "Bu kolay hafta içi akşam yemeği, zamanınız kısıtlı olduğunda ancak rahatlatıcı bir şeyler canınız çektiğinde mükemmeldir.",
+    "ingredients": "Malzemeler",
+    "ingredients_list": "<li>500g penne makarna</li><li>2 su bardağı çeri domates</li><li>1/2 su bardağı krema</li><li>Taze fesleğen</li><li>2 diş sarımsak, ince doğranmış</li>",
+    "view_label": "Kamuflaj Görünümü",
+    "leave_view": "Görünümden çık",
+    "back": "Geri"
+  },
+  "quick_exit": {
+    "hide_page": "Bu sayfayı gizle",
+    "double_escape": "Çıkmak için iki kez Esc tuşuna basın",
+    "label": "Hızlı Çıkış"
+  },
+  "warning": {
+    "emergency_notice": "Acil Durum Bildirimi:",
+    "internet_monitoring": "İnternet kullanımı izlenebilir. Nasıl yapılacağını öğrenin:",
+    "clear_history": "geçmişinizi temizleyin"
+  },
+  "navigation": {
+    "support": "Destek:",
+    "phone": "1-800-799-SAFE"
+  },
+  "document": {
+    "title": "Haven | Kriz Desteği"
+  },
+  "cards": {
+    "immediate_escape_plan": "Acil Kaçış Planı",
+    "immediate_escape_description": "Hızlıca ayrılmanız gerektiğinde yanınıza almanız gereken önemli belgeler, anahtarlar ve ilaçlar için bir kontrol listesi.",
+    "identity_document": "Kimlik Belgesi (Ehliyet, Pasaport)",
+    "birth_certificates": "Sizin ve çocuklarınız için doğum belgeleri",
+    "medications": "İlaçlar ve reçeteler",
+    "spare_keys": "Yedek anahtarlar (araba ve ev)",
+    "cash_cards": "Nakit para ve kredi kartları",
+    "emergency_housing": "Acil Barınma",
+    "emergency_housing_description": "Yakın çevrenizdeki güvenli sığınakları ve acil barınma seçeneklerini bulun.",
+    "find_shelters": "Sığınak bul",
+    "legal_rights": "Yasal Haklar ve Polis",
+    "legal_rights_description": "Uzaklaştırma kararları, emniyet güçlerine bildirim ve yasal haklarınız konusundaki seçeneklerinizi öğrenin.",
+    "read_guide": "Rehberi oku",
+    "view_checklist": "Kontrol listesini görüntüle"
+  },
+  "chat": {
+    "title": "Görüşmeleriniz gizlidir ve hiçbir veri kaydedilmez.",
+    "welcome": "Merhaba. Güvenli ve gizli bir Yapay Zekaya bağlandınız. Size nasıl yardımcı olabiliriz?",
+    "input_placeholder": "Mesajınızı yazın...",
+    "send": "Gönder",
+    "delete_and_close": "Sohbeti sil ve kapat"
+  },
+  "footer": {
+    "reminder": "Unutmayın: Hemen ayrılmak için iki kez ESC tuşuna basın veya ÇIKIŞ'a tıklayın.",
+    "national_hotlines": "Ulusal Yardım Hatları",
+    "clear_cache": "Önbellek Temizleme Aracı"
+  },
+  "checklist": {
+    "privacy_note_title": "Gizlilik notu:",
+    "privacy_note": "Bu kontrol listesi ilerlemenizi kaydetmez. Bu pencere kapatıldığında seçimleriniz silinecektir.",
+    "done": "Tamamlandı"
+  },
+  "errors": {
+    "chat_request": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
   "language": {
     "select": "Dil seçin"
   }
