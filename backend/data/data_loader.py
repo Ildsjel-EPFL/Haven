@@ -47,5 +47,6 @@ condition_titles = [
     "Quand les menaces concernent les enfants",
     "Faire face au harcèlement et aux contacts imposés",
     "Quand l'autre menace de se suicider ou de se faire du mal",
-    "Quand l'autre menace de révéler des informations privées"
+    "Quand l'autre menace de révéler des informations privées",
+    "Quand l'autre vous empêche de travailler",
     ]

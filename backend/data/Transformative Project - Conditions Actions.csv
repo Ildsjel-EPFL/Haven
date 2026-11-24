@@ -1,4 +1,4 @@
-Violence,Police,Préparer un sac,Quitter le domicile,Rassembler les documents,Préserver les preuves,Constat médical,Consultation et groupe de parole,Personne de confiance,Voisin,142,Soutien fin-jus-psy,Protéger avoirs,Humiliations et dévalorisations,Doute,Responsable des comportements,Isolement,Contrôle quotidien,Vie privée,Intimidation,Menace enfant,Harcèlement,Menace suicide,Menace info perso
+Violence,Police,Préparer un sac,Quitter le domicile,Rassembler les documents,Préserver les preuves,Constat médical,Consultation et groupe de parole,Personne de confiance,Voisin,142,Soutien fin-jus-psy,Protéger avoirs,Humiliations et dévalorisations,Doute,Responsable des comportements,Isolement,Contrôle quotidien,Vie privée,Intimidation,Menace enfant,Harcèlement,Menace suicide,Menace info perso,Empêchement de travailler
 PHY,"Une agression en cours :
     « Il me frappe maintenant. »
     La crainte d'une nouvelle agression dans l'immédiat : « Il revient et j'ai peur qu'il me frappe. »
@@ -58,7 +58,7 @@ Conditions de sécurité à vérifier :
 « Il connaît mes identifiants bancaires. »
 « J'ai peur qu'il vide mon compte si je pars. »
 « Je n'ai aucun compte auquel lui seul n'a pas accès. »
-« Je veux sécuriser mon argent avant une séparation. »",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.
+« Je veux sécuriser mon argent avant une séparation. »",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.
 SEX,"Une agression sexuelle en cours.
 Une menace de lui imposer un acte sexuel dans l’immédiat.
 Une impossibilité de s’éloigner : « Il bloque la porte », « Il me retient. »
@@ -116,7 +116,7 @@ Ne pas conseiller à ce proche de confronter l’auteur·e.",Ne peut pas arriver
 - « Il connaît mes identifiants bancaires. »
 - « Je voudrais sécuriser mon argent avant une séparation. »
 
-Condition supplémentaire : les démarches peuvent être faites sans augmenter le danger.",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.
+Condition supplémentaire : les démarches peuvent être faites sans augmenter le danger.",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.
 PSY,"**1. Subir des menaces faisant craindre un passage à l’acte imminent**
 
 - « Il menace de me tuer et il est devant moi. »
@@ -2269,5 +2269,56 @@ Ces propos doivent également orienter vers la protection de la personne et des 
 - « Il a déjà révélé mon orientation sexuelle sans mon accord. »
 - « Elle a envoyé mes messages privés à mes proches. »
 - « Il a publié mon adresse. »
-- « Elle menace de recommencer à chaque dispute. »"
-ECO,,,,,,,,,,,,,,,,,,,,,,,
+- « Elle menace de recommencer à chaque dispute. »",Ne peut pas arriver dans ce cas.
+ECO,"« Mon partenaire est devant moi et menace de me frapper si je ne lui donne pas le code de ma carte. »
+« Il bloque la porte et dit que je pourrai sortir quand j’aurai signé le prêt. »
+« Mon ex est devant chez moi. Il réclame de l’argent et menace d’enfoncer la porte. »
+« J’ai refusé de faire le virement. Mon partenaire vient de casser mon téléphone et j’ai peur qu’il s’en prenne à moi. »
+« Mon partenaire menace de faire du mal aux enfants si je ne lui donne pas mon salaire. Les enfants sont ici avec moi. »","« J’envisage de passer quelques nuits chez ma sœur. Qu’est-ce que je pourrais préparer pour moi et les enfants ? »
+« Mon partenaire menace de me mettre dehors quand je refuse de lui donner mon salaire. J’aimerais avoir quelques affaires prêtes au cas où. »
+« Si je dois partir rapidement, je n’aurai pas accès à notre argent pour racheter mes médicaments ou des vêtements. Qu’est-ce que je pourrais prévoir ? »
+« La dernière fois que j’ai dû quitter la maison, je suis partie sans mes clés ni mon chargeur. J’aimerais savoir quoi prendre si ça se reproduit. »
+« Une amie m’a proposé de garder quelques affaires chez elle. Qu’est-ce qui me serait utile si je devais y passer la nuit ? »
+« J’aimerais préparer quelques affaires, mais j’ai peur de la réaction de mon partenaire s’il trouve un sac. Quelles sont mes options ? »","« J’aimerais partir, mais mon partenaire garde mon salaire et je ne sais pas comment payer un logement. »
+« Mon partenaire menace de me mettre dehors. Où est-ce que je pourrais dormir si ça arrive ? »
+« J’aimerais passer quelques jours ailleurs pour réfléchir, mais je n’ai ni argent ni endroit où aller. »","« Mon partenaire garde mes fiches de salaire et mon permis de séjour. Quand je les lui demande, il refuse de me les donner. »
+« Mon partenaire a menacé de jeter mes papiers si je pars. J’aimerais en garder une copie. »
+« J’ai reçu un rappel pour un crédit à mon nom que je ne reconnais pas. Est-ce que je devrais garder ce courrier ? »
+« J’ai encore le message où mon partenaire menace de me couper l’accès au compte. J’aimerais pouvoir le montrer si je demande de l’aide. »
+« J’ai pris rendez-vous pour comprendre quelles factures sont à mon nom. Quels documents est-ce que je peux apporter ? »
+« Si je vais dormir chez ma sœur avec les enfants, quels papiers seraient utiles pour la suite ? »",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,"« Je me sens seule. »
+« J’ai honte ou je culpabilise. »
+« Je doute de ce que je vis. »
+« J’ai perdu confiance en moi. »
+« J’ai besoin de comprendre ma situation. »
+« Je voudrais rencontrer des personnes qui ont vécu quelque chose de similaire. »
+« Les violences sont terminées, mais j’en souffre encore. »","« Je dois demander de l’argent pour faire les courses. Je n’en ai encore parlé à personne et ça commence à me peser. »
+« Mon salaire arrive sur notre compte, mais je ne peux pas y accéder. J’aimerais en parler à ma sœur. »
+« Mon partenaire vérifie chacun de mes achats. J’aimerais pouvoir en parler à quelqu’un qui m’écoute sans me juger. »
+« On me dit que c’est normal de devoir montrer tous mes tickets de caisse. J’aimerais avoir l’avis d’une amie. »
+« J’ai honte de dire à ma famille que je n’ai plus accès à mon propre argent. Je ne sais pas comment aborder le sujet. »
+« Une amie m’a demandé pourquoi j’annule toutes nos sorties. J’aimerais lui dire que mon partenaire me prive d’argent. »
+« Mon partenaire me met la pression pour que je quitte mon travail. J’aimerais en discuter avec mon frère. »
+« J’ai découvert une dette à mon nom que je ne reconnais pas. J’aimerais que quelqu’un soit avec moi quand j’appellerai la banque. »
+« Je ne me sens pas prête à contacter un service d’aide. Je préférerais d’abord en parler à une amie. »
+« J’aimerais me confier à ma mère, mais j’ai peur qu’elle appelle mon partenaire. Comment lui demander de garder ça entre nous ? »
+« Mon partenaire lit mes messages. J’aimerais trouver un moment où je peux parler à ma sœur en privé. »
+« Pour l’instant, j’ai surtout besoin que quelqu’un m’écoute et me laisse décider de la suite. »",Ne peut pas arriver dans ce cas.,"« Mon partenaire vient de me prendre ma carte bancaire. Je suis bouleversée. Est-ce que je peux parler à quelqu’un maintenant ? »
+« On me menace de me couper l’accès à l’argent si je refuse de signer un crédit. J’ai peur et j’ai besoin d’un conseil. »
+« J’ai découvert une dette à mon nom que je ne reconnais pas. Je suis sous le choc et je ne sais pas vers qui me tourner ce soir. »
+« Je suis chez une amie pour la nuit. Mon partenaire garde mon salaire et je ne sais pas comment faire pour demain. Qui peut m’orienter ? »
+« Je ne sais pas si ce que je vis, c’est de la violence. Je dois demander la permission pour chaque achat. Est-ce que je peux en parler à quelqu’un en privé ? »
+« J’ai besoin d’aide ce soir, mais je ne veux pas déposer plainte pour le moment. Est-ce qu’il y a quelqu’un que je peux appeler ? »
+« Ma sœur vient de m’appeler en pleurs. Son partenaire lui a pris tout son argent. Est-ce que je peux appeler quelqu’un pour savoir comment la soutenir ? »","Financier : « Mon partenaire garde ma carte et je n’ai plus d’argent pour les courses. » · « J’aimerais passer quelques jours ailleurs, mais je ne peux pas payer un hébergement. » · « J’ai besoin d’un conseil juridique et je ne sais pas comment le financer. »
+Juridique : « J’ai découvert un crédit à mon nom que je n’ai jamais accepté. Quels sont mes droits ? » · « Mon partenaire m’a menacée pour que je signe un contrat. Qu’est-ce que je peux faire ? » · « Mon ex utilise encore mon compte sans mon accord. J’aimerais connaître mes options. »
+Psychologique : « J’angoisse chaque fois que je dois demander de l’argent pour les courses. » · « Depuis que j’ai découvert ces dettes à mon nom, je n’arrive plus à dormir. » · « J’ai honte d’en parler à mon entourage. J’aimerais pouvoir en discuter avec quelqu’un qui m’écoute sans me juger. »","« Mon partenaire a accès à mon compte personnel. »
+« Il prend mon argent sans mon accord. »
+« Il connaît mes identifiants bancaires. »
+« J’ai peur qu’il vide mon compte si je pars. »
+« Je n’ai aucun compte auquel lui seul n’a pas accès. »
+« Je veux sécuriser mon argent avant une séparation. »",Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,Ne peut pas arriver dans ce cas.,"« J’aimerais reprendre le travail, mais mon partenaire me menace si j’accepte un poste. »
+« Quand j’ai un entretien d’embauche, mon partenaire me cache les clés pour que je ne puisse pas y aller. »
+« Mon ex vient sur mon lieu de travail et m’appelle sans arrêt. J’ai peur de perdre mon emploi. »
+« Mon partenaire me dit que si je continue mon apprentissage, je n’aurai plus d’argent pour le trajet. »
+« J’ai arrêté mes études parce que j’avais peur de sa réaction si je continuais. »
+« Mon ex m’a dit qu’il refuserait de garder les enfants les jours de cours pour m’obliger à abandonner ma formation. »"

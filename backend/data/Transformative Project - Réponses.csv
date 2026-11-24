@@ -1,4 +1,4 @@
-Violence,Police,Préparer un sac,Quitter le domicile,Rassembler les documents,Préserver les preuves,Constat médical,Consultation et groupe de parole,Personne de confiance,Voisin,142,Soutien fin-jus-psy,Protéger avoirs,Humiliations et dévalorisations,Doute,Responsable des comportements,Isolement,Contrôle quotidien,Vie privée,Intimidation,Menace enfant,Harcèlement,Menace suicide,Menace info perso
+Violence,Police,Préparer un sac,Quitter le domicile,Rassembler les documents,Préserver les preuves,Constat médical,Consultation et groupe de parole,Personne de confiance,Voisin,142,Soutien fin-jus-psy,Protéger avoirs,Humiliations et dévalorisations,Doute,Responsable des comportements,Isolement,Contrôle quotidien,Vie privée,Intimidation,Menace enfant,Harcèlement,Menace suicide,Menace info perso,Empêchement de travailler
 PHY,"Le numéro de la police en cas de danger immédiat ou non urgent est le 117. Il est gratuit et disponible 24 h/24, 7 j/7","Avec des affaires personnelles pour vous et vos enfants ainsi que les papiers importants et un peu d'argent pour pouvoir partir rapidement en cas d'urgence.
 
 Potentielle réponse :
@@ -138,7 +138,7 @@ Demandez aussi à la banque comment éviter que des courriers ou notifications r
 
 Pour un compte commun, demandez un conseil adapté avant de le bloquer ou de déplacer des fonds, afin de comprendre les conséquences sur les paiements et les charges du ménage.
 
-Si vous craignez la réaction de votre partenaire ou n’avez pas d’argent à votre disposition, un service spécialisé peut vous accompagner pour préparer ces démarches. Le Centre LAVI peut examiner les aides auxquelles votre situation donne accès et vous orienter si nécessaire.""",,,,,,,,,,,
+Si vous craignez la réaction de votre partenaire ou n’avez pas d’argent à votre disposition, un service spécialisé peut vous accompagner pour préparer ces démarches. Le Centre LAVI peut examiner les aides auxquelles votre situation donne accès et vous orienter si nécessaire.""",,,,,,,,,,,,
 SEX,"""Si vous êtes en danger ou craignez une nouvelle agression, appelez le **117**, le numéro d’urgence de la police en Suisse.
 
 Indiquez où vous vous trouvez et ce qui se passe. Si vous pouvez le faire sans vous exposer davantage, rejoignez un endroit sûr.""","""Si vous pouvez le faire sans vous mettre en danger, préparez un sac pour pouvoir partir rapidement en cas de besoin. Prévoyez :
@@ -230,7 +230,7 @@ Demandez aussi à la banque comment éviter que des courriers ou notifications r
 
 Pour un compte commun, demandez un conseil adapté avant de le bloquer ou de déplacer des fonds, afin de comprendre les conséquences sur les paiements et les charges du ménage.
 
-Si vous craignez la réaction de votre partenaire ou n’avez pas d’argent à votre disposition, un service spécialisé peut vous accompagner pour préparer ces démarches. Le Centre LAVI peut examiner les aides auxquelles votre situation donne accès et vous orienter si nécessaire.""",,,,,,,,,,,
+Si vous craignez la réaction de votre partenaire ou n’avez pas d’argent à votre disposition, un service spécialisé peut vous accompagner pour préparer ces démarches. Le Centre LAVI peut examiner les aides auxquelles votre situation donne accès et vous orienter si nécessaire.""",,,,,,,,,,,,
 PSY,"""Si vous êtes en danger immédiat, appelez la police au **117**, gratuitement, 24 h/24 et 7 j/7. Vous n’avez pas besoin d’attendre d’être frappé·e pour demander une intervention.
 
 Appelez notamment si votre partenaire ou ex-partenaire menace de vous faire du mal, vous empêche de sortir, utilise une arme pour vous intimider, tente d’entrer de force ou vous poursuit dans une situation menaçante.
@@ -436,5 +436,65 @@ Si vous pouvez le faire sans vous mettre en danger, vous pouvez conserver une tr
 
 Pour obtenir de l’aide en Suisse, vous pouvez **appeler le 142** ou contacter un **centre de consultation LAVI**, dont vous trouverez les coordonnées sur [aide-aux-victimes.ch](https://www.aide-aux-victimes.ch/fr/). Ces services proposent des conseils gratuits et confidentiels, avec la possibilité de rester anonyme. Ils peuvent vous écouter, vous informer sur vos droits et vous accompagner dans les démarches adaptées à votre situation.
 
-**En cas de danger immédiat, appelez la police au 117 : le 142 n’est pas un numéro d’urgence.**"""
-ECO,,,,,,,,,,,,,,,,,,,,,,,
+**En cas de danger immédiat, appelez la police au 117 : le 142 n’est pas un numéro d’urgence.**""",
+ECO,"« Si vous ou vos enfants êtes en danger maintenant, appelez le 117 pour demander l’intervention de la police. Vous pouvez appeler même si votre partenaire ne vous a pas frappé·e. 
+
+Indiquez où vous êtes et dites en quelques mots ce qui se passe. Par exemple : “Je suis à [adresse]. Mon partenaire me menace pour que je lui donne de l’argent et m’empêche de sortir.” Si des enfants sont présents, précisez-le.
+
+Si vous ne pouvez pas appeler vous-même en sécurité, vous pouvez demander à une personne à proximité d’appeler le 117 pour vous. »","« Si vous envisagez de passer une nuit ailleurs ou si vous craignez de devoir partir rapidement, vous pouvez préparer quelques affaires, si cela vous semble sûr. C’est vous qui décidez si et quand vous souhaitez partir.
+
+Pensez d’abord à ce dont vous auriez besoin pour une nuit : vos clés, votre téléphone et son chargeur, vos médicaments et des vêtements de rechange. Si vous y avez accès, vous pouvez aussi prendre une pièce d’identité, votre carte d’assurance maladie et un moyen de paiement. Si vos enfants vous accompagnent, pensez à leurs médicaments et à un objet qui les rassure.
+
+Si vous craignez la réaction de votre partenaire en découvrant le sac, vous pouvez confier quelques affaires à une personne de confiance si cela vous semble plus sûr, ou renoncer à préparer un sac. Si vous devez vous mettre à l’abri immédiatement, vous pouvez partir les mains vides et demander de l’aide, même sans argent ni papiers.
+
+Souhaitez-vous des informations sur un lieu où vous pourriez passer la nuit ? »","« Si vous envisagez de passer quelques jours ailleurs et que vous vous demandez où aller, vous pouvez vous renseigner sur les possibilités d’hébergement. Vous pouvez le faire même si votre partenaire contrôle l’argent du ménage et que vous n’avez pas d’argent à votre disposition.
+
+Dans le canton de Vaud, un centre de consultation LAVI peut vous aider à chercher un lieu où séjourner, avec vos enfants si besoin. Vous pouvez simplement poser vos questions, en toute confidentialité, même si vous hésitez encore à partir.
+
+Souhaitez-vous les coordonnées d’un service avec lequel vous pourriez en parler ? »","« Si vous craignez de perdre l’accès à vos papiers, vous pouvez garder une copie de ceux qui vous seraient utiles, si vous pouvez le faire en sécurité. Selon votre situation, il peut s’agir de votre pièce d’identité ou de celles de vos enfants, de votre permis de séjour, d’une fiche de salaire ou d’un relevé bancaire. Si vous avez reçu un courrier concernant une dette que vous ne reconnaissez pas, ou un message de menace lié à l’argent, vous pouvez aussi en garder une copie.
+
+Choisissez un endroit auquel votre partenaire n’a pas accès. Si récupérer ou copier un document risque de vous mettre en danger, vous pouvez le laisser sur place. Vous pouvez demander de l’aide même si vous n’avez aucun document avec vous.
+
+Souhaitez-vous de l’aide pour identifier les documents qui pourraient vous être utiles dans votre situation ? »",,,"""Vous pouvez bénéficier d’un soutien pour parler de ce que vous vivez, faire le point et réfléchir aux possibilités qui vous conviennent, même si vous ne savez pas encore quelle décision prendre.
+
+Le Centre d’accueil MalleyPrairie propose  :
+
+Des consultations individuelles, pour les personnes adultes victimes de violences.
+
+Ces prestations sont gratuites. Vous pouvez appeler le 021 620 76 76, accessible 24 h/24 et 7 j/7, pour demander des renseignements ou organiser une consultation. Des rendez-vous sont également proposés dans plusieurs localités du canton de Vaud.""","« Si votre partenaire contrôle vos dépenses ou vous empêche d’accéder à votre argent, vous avez le droit d’en parler. Vous pouvez choisir un·e ami·e ou un membre de votre famille qui saura vous écouter et respecter vos décisions.
+
+Si vous cherchez vos mots, vous pourriez commencer ainsi : “En ce moment, je ne peux pas utiliser mon argent librement. Ça me pèse et j’aimerais t’en parler. Pour l’instant, j’ai surtout besoin que tu m’écoutes. Est-ce que tu peux garder ça entre nous et me demander mon avis avant de faire quoi que ce soit ?”
+
+Vous choisissez ce que vous souhaitez partager, à quel moment et de quelle aide vous avez besoin. Si vous craignez que votre partenaire lise vos messages, privilégiez un moment et un moyen de parler qui vous semblent sûrs. Si vous préférez vous confier à quelqu’un en dehors de votre entourage, vous pouvez aussi contacter un service d’aide aux victimes en toute confidentialité. »",,"« Si votre partenaire contrôle votre argent et que vous avez besoin d’en parler maintenant, vous pouvez appeler le 142, la ligne suisse d’aide aux victimes. L’appel est gratuit et confidentiel, 24 h/24 et 7 j/7.
+
+Vous pouvez simplement raconter ce qui vous inquiète, même si vous hésitez à mettre des mots sur ce que vous vivez. Une personne vous écoutera et pourra vous aider à trouver un soutien adapté. Vous pouvez appeler même si vous ne souhaitez pas porter plainte. 
+
+Si vous êtes en danger immédiat et avez besoin que la police intervienne, appelez le 117. »","« Si votre partenaire contrôle vos dépenses, vous prive d’accès à votre argent ou vous fait pression pour signer des documents, vous pouvez en parler à un Centre LAVI. Lors d’un premier entretien gratuit et confidentiel, vous pouvez expliquer ce qui vous préoccupe le plus et examiner avec une personne spécialisée les soutiens possibles. Vous pouvez prendre contact même si vous n’avez pas porté plainte ou si vous hésitez sur la manière de décrire ce que vous vivez. 
+
+Selon vos besoins et votre situation, le Centre peut vous proposer :
+- Un soutien financier. Si vous avez besoin d’un hébergement temporaire ou de conseils juridiques et que vous ne pouvez pas les payer, le Centre peut examiner avec vous si une prise en charge est possible. Si votre préoccupation principale concerne des dettes ou des factures, vous pouvez aussi demander vers quel service vous tourner. Une perte d’argent, à elle seule, n’ouvre en principe pas droit à une aide financière LAVI (lavi-vaud.ch)
+- Un soutien juridique. Si l’on vous réclame une dette que vous ne reconnaissez pas ou si vous avez signé sous la menace, vous pouvez poser vos questions sur vos droits et les démarches possibles. Le Centre peut aussi vous orienter vers un conseil juridique adapté. 
+- Un soutien psychologique. Vous pouvez parler de la peur, de la honte ou des difficultés de sommeil que cette situation entraîne. Si vous souhaitez poursuivre cet accompagnement, le Centre peut vous orienter vers un·e professionnel·le. 
+Dans le canton de Vaud, vous pouvez appeler le centre de votre choix pour prendre rendez-vous. l’aide aux victimes en Suisse
+- Lausanne : 021 631 03 00
+- Aigle : 021 631 03 04
+- Nyon : 021 631 03 02
+- Yverdon-les-Bains — 021 631 03 08
+Si vous avez besoin d’en parler dès maintenant, vous pouvez aussi appeler le 142. Cette ligne offre une écoute et des conseils confidentiels, gratuitement, 24 h/24 et 7 j/7. »","""Si votre partenaire contrôle votre argent, utilise vos comptes sans votre accord ou menace de vous priver de ressources, vous pouvez demander de l’aide pour sécuriser vos finances.
+
+Si ces démarches peuvent être faites sans augmenter le danger, contactez votre banque pour examiner les possibilités adaptées à votre situation :
+
+- Sécuriser l’accès à votre compte personnel et à vos cartes.
+- Retirer une procuration permettant à votre partenaire d’utiliser votre compte.
+- Ouvrir un compte personnel auquel votre partenaire n’a pas accès.
+- Modifier vos identifiants et mots de passe depuis un appareil sûr.
+
+Demandez aussi à la banque comment éviter que des courriers ou notifications révèlent ces démarches à votre partenaire.
+
+Pour un compte commun, demandez un conseil adapté avant de le bloquer ou de déplacer des fonds, afin de comprendre les conséquences sur les paiements et les charges du ménage.
+
+Si vous craignez la réaction de votre partenaire ou n’avez pas d’argent à votre disposition, un service spécialisé peut vous accompagner pour préparer ces démarches. Le Centre LAVI peut examiner les aides auxquelles votre situation donne accès et vous orienter si nécessaire.""",,,,,,,,,,,,"« Si votre partenaire ou votre ex-partenaire vous empêche de travailler ou de vous former, ces comportements peuvent être une forme de violence économique. Vous n’êtes pas responsable des pressions que vous subissez. (->ebg.admin.ch)
+
+Qu’est-ce qui vous préoccupe le plus en ce moment ? Cela peut être de pouvoir aller à votre prochain cours, de garder votre emploi ou de reprendre une activité que vous avez dû interrompre. Vous pouvez commencer par ce qui compte le plus pour vous, même si vous ne savez pas encore quelle démarche entreprendre.
+
+Si vous souhaitez en parler, le Centre d’accueil MalleyPrairie propose des consultations aux personnes adultes domiciliées dans le canton de Vaud qui vivent des violences dans leur couple ou leur famille. Vous pouvez appeler le 021 620 76 76, joignable 24 h/24 et 7 j/7, pour demander des renseignements ou convenir d’un rendez-vous. »"

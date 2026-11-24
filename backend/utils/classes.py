@@ -101,6 +101,7 @@ class Condition(BaseModel):
         harassment_handling (bool): Indicates if the person should handle harassment and imposed contacts.
         self_harm_threats_handling (bool): Indicates if the person should handle threats of self-harm or suicide from the other.
         private_informations_revelation_threats_handling (bool): Indicates if the person should handle threats of private information being revealed.
+        prevent_work (bool): Indicates if the person is prevented to work.
     """
     police : bool = Field(description="Indicates if police intervention is required.", default=False)
     pack_your_things : bool = Field(description="Indicates if the person should pack their things.", default=False)
@@ -124,6 +125,7 @@ class Condition(BaseModel):
     harassment_handling : bool = Field(description="Indicates if the person should handle harassment and imposed contacts.", default=False)
     self_harm_threats_handling : bool = Field(description="Indicates if the person should handle threats of self-harm or suicide from the other.", default=False)
     private_informations_revelation_threats_handling : bool = Field(description="Indicates if the person should handle threats of private information being revealed.", default=False)
+    prevent_work : bool = Field(description="Indicates if the person is prevented to work.", default=False)
 
     @property
     def mask(self) -> List[bool]:
@@ -150,6 +152,7 @@ class Condition(BaseModel):
             self.harassment_handling,
             self.self_harm_threats_handling,
             self.private_informations_revelation_threats_handling,
+            self.prevent_work,
             ]
 
 class ChatRequest(BaseModel):
